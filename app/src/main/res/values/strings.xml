@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Visto Car</string>
+    <string name="image">Logo Visto Car</string>
+    <string name="email">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="text">Texto</string>
+    <string name="botao">Entrar</string>
+    <string name="vistocar">Visto Car desde 2000 fazendo História.</string>
+    <string name="digite_sua_senha">Digite sua senha</string>
+    <string name="digite_seu_usuario">Digite seu usuario</string>
+    <string name="title_activity_meu_lateral">meu_lateral</string>
+</resources>
