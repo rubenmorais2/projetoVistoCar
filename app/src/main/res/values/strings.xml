@@ -1,12 +1,29 @@
 <resources>
     <string name="app_name">Visto Car</string>
     <string name="image">Logo Visto Car</string>
+    <string name="imagem">Imagem Logo</string>
     <string name="email">E-mail</string>
     <string name="senha">Senha</string>
     <string name="text">Texto</string>
     <string name="botao">Entrar</string>
     <string name="vistocar">Visto Car desde 2000 fazendo História.</string>
     <string name="digite_sua_senha">Digite sua senha</string>
-    <string name="digite_seu_usuario">Digite seu usuario</string>
+    <string name="digite_seu_usuario">Úsuario</string>
     <string name="title_activity_meu_lateral">meu_lateral</string>
+    <string name="textview">TextView</string>
+    <string name="perfil">Perfil</string>
+    <string name="agendamento">Agendamento</string>
+    <string name="configuracao">Configuração</string>
+    <string name="sair">Sair</string>
+    <string name="esqueci_minha_senha">Esqueci minha senha</string>
+    <string name="lembrar_senha">Lembrar senha</string>
+    <string name="email_invalido">Digite um e-mail cadastrado em nosso sistema.</string>
+    <string name="senha_invalida">Senha invalida</string>
+    <string name="action_config" />
+    <string name="action_adicionar" />
+    <string name="action_atualizar" />
+    <string name="action_buscar" />
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="usuario">Nome Usuário</string>
 </resources>
