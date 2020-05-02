@@ -5,12 +5,10 @@
     android:id="@+id/layoutMenuLateral"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:ignore="MissingDefaultResource">
+    android:fitsSystemWindows="true">
 
     <!--Conteúdo da tela-->
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -19,8 +17,8 @@
         <include layout="@layout/toolbar" />
 
         <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="178dp"
+            android:layout_height="218dp">
 
             <!-- Colocar cardview com as disciplinas-->
             <androidx.recyclerview.widget.RecyclerView
@@ -33,12 +31,10 @@
                 android:dividerHeight="0dp"
                 android:listSelector="@android:color/transparent"
                 android:scrollbarStyle="outsideOverlay"
-                android:scrollbars="vertical">
-            </androidx.recyclerview.widget.RecyclerView>
+                android:scrollbars="vertical"></androidx.recyclerview.widget.RecyclerView>
 
         </ScrollView>
     </LinearLayout>
-
 
     <!--Menu lateral-->
     <com.google.android.material.navigation.NavigationView
@@ -54,4 +50,6 @@
     </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>
+
+
 

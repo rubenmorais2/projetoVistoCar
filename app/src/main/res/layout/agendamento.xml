@@ -8,7 +8,7 @@
     tools:context=".CriarAgendamento">
 
     <EditText
-        android:id="@+id/nomeDisciplina"
+        android:id="@+id/nomeAgendamento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -16,7 +16,7 @@
         android:inputType="textPersonName"/>
 
     <EditText
-        android:id="@+id/ementaDisciplina"
+        android:id="@+id/agendamento"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:ems="10"
@@ -24,20 +24,12 @@
         android:inputType="textMultiLine" />
 
     <EditText
-        android:id="@+id/professorDisciplina"
+        android:id="@+id/data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Professor"
+        android:hint="Horário"
         android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/urlFoto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="URL Foto"
-        android:inputType="textPersonName"/>
 
     <Button
         android:id="@+id/salvarDisciplina"

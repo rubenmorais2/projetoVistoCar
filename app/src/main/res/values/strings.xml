@@ -26,4 +26,19 @@
     <string name="navigation_drawer_open">Open</string>
     <string name="navigation_drawer_close">Close</string>
     <string name="usuario">Nome Usuário</string>
+    <string name="mensagem_tela_inicial">O Grupo Visto-Car iniciou suas atividades no Ano 2000
+        (Unidade Jaçanã - SP) e a dedicação estratégica à satisfação do cliente e ao cumprimento dos
+        requisitos de qualidade vigentes resultaram em um sucesso empresarial que tornou possível a
+        expansão do negócio. É objeto da constituição de várias empresas (bases de inspeção) denominadas
+        Organismos de Inspeção de Segurança Veicular acreditados pela CGCRE-INMETRO como
+        OIA-SV (Segurança Veicular), OIA - PP e OIVA (Produtos Perigosos) e licenciados pelo
+        DENATRAN como I.T.L - Instituição Técnica Licenciada.
+        Em atendimento à frota específica de veículos que transportam produtos perigosos,
+        possui acreditações autorizadas, em pontos estratégicos, para realizar capacitações e emissão
+        do CIPP - Certificado de Inspeção de Produtos Perigosos e C.I.V – Certificado de Inspeção
+        Veicular – RTQ-05.
+        É atuante em Inspeção de Segurança Veicular e Homologação de Empresas há muitos
+        anos, com o recorde de milhares de Inspeções realizadas em suas bases de inspeção e diversas
+        empresas homologadas pelo Grupo Visto-Car para Fabricação de equipamentos rodoviários e
+        encarroçadores.</string>
 </resources>

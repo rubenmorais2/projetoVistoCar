@@ -38,7 +38,6 @@ class MainActivity : DebugActivity() {
 
         var Intent = Intent(this, TelaInicial::class.java)
 
-        startActivity(intent)
 
 
         }

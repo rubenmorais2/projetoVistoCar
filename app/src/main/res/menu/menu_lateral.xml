@@ -11,10 +11,13 @@
             android:id="@+id/nav_agendamento"
             android:icon="@drawable/agendamento"
             android:title="Agendamento" />
-
-        <item
-            android:id="@+id/nav_sair"
-            android:icon="@drawable/sair"
-            android:title="Sair"/>
     </group>
+        <item android:title="">
+            <menu>
+                <item
+                    android:id="@+id/nav_sair"
+                    android:icon="@drawable/sair"
+                    android:title="Sair"/>
+            </menu>
+        </item>
 </menu>

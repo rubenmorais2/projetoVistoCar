@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.login.*
 import kotlinx.android.synthetic.main.tela_inicial.*
 import kotlinx.android.synthetic.main.toolbar.*
 
-abstract class TelaInicial : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private val context: Context get() = this
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,8 +27,10 @@ abstract class TelaInicial : AppCompatActivity(), NavigationView.OnNavigationIte
 
         setSupportActionBar(toolbar)
 
-        supportActionBar?.title = "Agendamento"
+        supportActionBar?.title = "Tela Inicial"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        configuraMenuLateral()
     }
 
     fun cliqueSair() {
@@ -39,8 +41,22 @@ abstract class TelaInicial : AppCompatActivity(), NavigationView.OnNavigationIte
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_lateral, menu)
+        // infla o menu com os botões da ActionBar
+        menuInflater.inflate(R.menu.menu_config, menu)
+        // vincular evento de buscar
+        (menu?.findItem(R.id.action_buscar)?.actionView as SearchView).setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 
+            override fun onQueryTextChange(newText: String): Boolean {
+                // ação enquanto está digitando
+                return false
+            }
+
+            override fun onQueryTextSubmit(query: String): Boolean {
+                // ação  quando terminou de buscar e enviou
+                return false
+            }
+
+        })
         return true
     }
 
@@ -53,11 +69,45 @@ abstract class TelaInicial : AppCompatActivity(), NavigationView.OnNavigationIte
             Toast.makeText(this, "Clicou em Atualizar", Toast.LENGTH_LONG).show()
         } else if (id == R.id.action_config) {
             Toast.makeText(this, "Clicou em Configuração", Toast.LENGTH_LONG).show()
-        }else if (id == R.id.home) {
+        } else if (id == android.R.id.home) {
             finish()
         }
 
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun configuraMenuLateral() {
+
+        // ícone de menu (hamburger) para mostrar o menu
+        var toogle = ActionBarDrawerToggle(this, layoutMenuLateral, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+
+        layoutMenuLateral.addDrawerListener(toogle)
+        toogle.syncState()
+
+        menu_lateral.setNavigationItemSelectedListener(this)
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.nav_agendamento -> {
+                var Intent = Intent(this, agendamento::class.java)
+                intent.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(intent)
+            }
+
+            R.id.nav_perfil -> {
+                Toast.makeText(this, "Clicou no Perfil", Toast.LENGTH_SHORT).show()
+            }
+
+            R.id.nav_sair -> {
+                finish()
+            }
+
+        }
+
+        // fecha menu depois de tratar o evento
+        layoutMenuLateral.closeDrawer(GravityCompat.START)
+        return true
     }
 }
 
