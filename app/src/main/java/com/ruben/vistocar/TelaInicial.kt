@@ -21,6 +21,9 @@ import kotlinx.android.synthetic.main.toolbar.*
 class TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private val context: Context get() = this
+
+    private var agendamentos = listOf<agendamento>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tela_inicial)
@@ -31,6 +34,23 @@ class TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedList
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         configuraMenuLateral()
+
+        recyclerAgendamentos?.layoutManager = LinearLayoutManager(context)
+        recyclerAgendamentos?.itemAnimator = DefaultItemAnimator()
+        recyclerAgendamentos?.setHasFixedSize(true)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        taskAgendamentos()
+    }
+
+    fun taskAgendamentos(){
+        agendamentos = ServicesAgendamento.getAgendamentos(context)
+        recyclerAgendamentos?.adapter = AgendamentoAdapter(agendamentos) {onClickAgendamento(it)}
+    }
+
+    fun onClickAgendamento(agendamento: agendamento){
     }
 
     fun cliqueSair() {
@@ -90,8 +110,7 @@ class TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedList
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_agendamento -> {
-                var Intent = Intent(this, agendamento::class.java)
-                intent.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                var intent = Intent(this, CriarAgendamento ::class.java)
                 startActivity(intent)
             }
 
@@ -109,8 +128,8 @@ class TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedList
         layoutMenuLateral.closeDrawer(GravityCompat.START)
         return true
     }
-}
 
+}
 
 
 

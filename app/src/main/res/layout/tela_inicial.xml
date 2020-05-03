@@ -17,8 +17,8 @@
         <include layout="@layout/toolbar" />
 
         <ScrollView
-            android:layout_width="178dp"
-            android:layout_height="218dp">
+            android:layout_width="match_parent"
+            android:layout_height="678dp">
 
             <!-- Colocar cardview com as disciplinas-->
             <androidx.recyclerview.widget.RecyclerView

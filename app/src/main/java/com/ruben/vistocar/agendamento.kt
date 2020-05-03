@@ -13,11 +13,8 @@ class agendamento: Serializable {
     @PrimaryKey
     var id: Long = 0
     var nome: String = ""
-    var carro: String = ""
-    var modeloCarro: String = ""
-    var data: String = ""
-    var horario: Int = 0
-    var foto = ""
+    var categoria: String = ""
+    var foto: String = ""
 
     override fun toString(): String {
         return "Agendamento(nome'$nome')"

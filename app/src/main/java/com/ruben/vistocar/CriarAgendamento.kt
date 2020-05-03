@@ -4,15 +4,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.agendamento.*
 
-class CriarAgendamento : AppCompatActivity() {
+class CriarAgendamento : DebugActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.agendamento)
-        setTitle("Nova Disciplina")
+        setTitle("Novo Agendamento")
 
-        salvarDisciplina.setOnClickListener {
-            val disciplina = agendamento()
+        salvarAgendamento.setOnClickListener {
+            val agendamento = agendamento()
         }
     }
 }
