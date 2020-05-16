@@ -22,3 +22,4 @@ class ExampleInstrumentedTest {
         assertEquals("com.ruben.vistocar", appContext.packageName)
     }
 }
+

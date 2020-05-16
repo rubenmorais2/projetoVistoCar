@@ -26,19 +26,20 @@
     <string name="navigation_drawer_open">Open</string>
     <string name="navigation_drawer_close">Close</string>
     <string name="usuario">Nome Usuário</string>
-    <string name="mensagem_tela_inicial">O Grupo Visto-Car iniciou suas atividades no Ano 2000
-        (Unidade Jaçanã - SP) e a dedicação estratégica à satisfação do cliente e ao cumprimento dos
-        requisitos de qualidade vigentes resultaram em um sucesso empresarial que tornou possível a
-        expansão do negócio. É objeto da constituição de várias empresas (bases de inspeção) denominadas
-        Organismos de Inspeção de Segurança Veicular acreditados pela CGCRE-INMETRO como
-        OIA-SV (Segurança Veicular), OIA - PP e OIVA (Produtos Perigosos) e licenciados pelo
-        DENATRAN como I.T.L - Instituição Técnica Licenciada.
-        Em atendimento à frota específica de veículos que transportam produtos perigosos,
-        possui acreditações autorizadas, em pontos estratégicos, para realizar capacitações e emissão
-        do CIPP - Certificado de Inspeção de Produtos Perigosos e C.I.V – Certificado de Inspeção
-        Veicular – RTQ-05.
-        É atuante em Inspeção de Segurança Veicular e Homologação de Empresas há muitos
-        anos, com o recorde de milhares de Inspeções realizadas em suas bases de inspeção e diversas
-        empresas homologadas pelo Grupo Visto-Car para Fabricação de equipamentos rodoviários e
-        encarroçadores.</string>
+    <string name="grupo">GRUPO VISTO-CAR</string>
+    <string name="oferecimento">Oferecemos diversos canais de comunicação, converse com a gente sempre que quiser.
+        Esse espaço foi criado para responder e sanar suas dúvidas. Se a recepção não foi satisfatório, faça sua reclamação e iremos atendê-lo da melhor forma possível.
+        Ajude-nos a melhorar nossos serviços com a sua opinião e se o atendimento na VistoCar foi bom nos envie um elogio.</string>
+    <string name="email_contato">vistocar@vistocar.com.br</string>
+    <string name="whatsApp">(11) 94353-4802/2240-2222</string>
+    <string name="consultar">Consultar Tabela de Preços</string>
+    <string name="mais">Saiba Mais</string>
+    <string name="recuperados">VEÍCULOS RECUPERADOS DE SINISTRO</string>
+    <string name="recuperados2">Documentos do Denatran e Inmetro afirmando que o veículo está correto com a lei</string>
+    <string name="inspecao_com_emissao">Inspeção com emissão do CSV – Certificado de Segurança Veicular - Denatran e Inmetro apontando se os itens de segurança estão aprovados e
+        de acordo com a legislação de transito. O veículo que sofre acidente é classificado pelas autoridades como pequena, média ou grande monta. Veículos com média monta, após o reparo,
+        devem ser submetidos a inspeção veicular no Grupo Visto-Car para:
+¹Dar baixa na restrição junto ao Detran;
+²Emissão do CSV ou constatação dos itens não conformes;
+³Garantir a perfeita segurança para transitar em vias publicas.</string>
 </resources>

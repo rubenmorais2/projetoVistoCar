@@ -11,6 +11,67 @@
             android:id="@+id/nav_agendamento"
             android:icon="@drawable/agendamento"
             android:title="Agendamento" />
+
+        <item
+            android:id="@+id/fale_conosco"
+            android:icon="@drawable/fale_conosco"
+            android:title="Fale Conosco"/>
+        <item
+            android:id="@+id/grupo"
+            android:icon="@drawable/ogrupo"
+            android:title="Sobre Nós"/>
+
+        <item
+            android:id="@+id/services"
+            android:icon="@drawable/servicos"
+            android:title="Serviços">
+            <menu>
+                <item
+                    android:id="@+id/veiculos"
+                    android:title="Veículos Recuperados" />
+                <item
+                    android:id="@+id/modificados"
+                    android:title="Veículos Modificados" />
+                <item
+                    android:id="@+id/gas"
+                    android:title="Gás Natural Veicular" />
+                <item
+                    android:id="@+id/transporte"
+                    android:title="Transporte Produtos Perigosos" />
+                <item
+                    android:id="@+id/alvaras"
+                    android:title="Alvarás" />
+                <item
+                    android:id="@+id/inspecaoM"
+                    android:title="Inspeção Mercosul" />
+                <item
+                    android:id="@+id/inspecaoS"
+                    android:title="Inspeção de Segurança" />
+                <item
+                    android:id="@+id/inspecaoQ"
+                    android:title="Inspeção de Qualidade" />
+                <item
+                    android:id="@+id/fretamento"
+                    android:title="Fretamento Autorizado" />
+                <item
+                    android:id="@+id/homologacao"
+                    android:title="Homologação de Empresas" />
+                <item
+                    android:id="@+id/insencao"
+                    android:title="Insenção de IPVA (Deficientes)" />
+                <item
+                    android:id="@+id/acessibilidade"
+                    android:title="Acessibilidade em Ônibus" />
+                <item
+                    android:id="@+id/caminhoes"
+                    android:title="Caminhões Para Coleta(Entulho)" />
+                <item
+                    android:id="@+id/importacao"
+                    android:title="Processo de Importação" />
+
+            </menu>
+        </item>
+
     </group>
         <item android:title="">
             <menu>

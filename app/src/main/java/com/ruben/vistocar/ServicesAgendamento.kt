@@ -1,46 +1,95 @@
 package com.ruben.vistocar
 
 import android.content.Context
-import android.content.Intent
-import androidx.core.content.ContextCompat.startActivity
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+
 
 object ServicesAgendamento {
 
-    fun getAgendamentos(context: Context): List<agendamento> {
-        val agendamentos = mutableListOf<agendamento>()
 
-        val a = agendamento()
-        a.nome = "Veículos Recuperados de Sinistro"
-        a.categoria = "1"
-        a.foto = "http://www.vistocar.com.br/template/imagens/img-home-1.png"
-        agendamentos.add(a)
 
-        a.nome = "Veículos Modificados/ Alteração de Caracteristicas"
-        a.categoria = "2"
-        a.foto = "https://www.vistocar.com.br/template/imagens/img-home-2.png"
-        agendamentos.add(a)
+    val host = "https://fesousa.pythonanywhere.com"
+    val TAG = "AppVistoCar"
 
-        a.nome = "Gás Natural Veicular (GNV)"
-        a.categoria = "3"
-        a.foto = "https://www.vistocar.com.br/template/imagens/img-home-3.png"
-        agendamentos.add(a)
+    fun getAgendamentos (context: Context): List<AgendamentoPai> {
+        var agendamentos = ArrayList<AgendamentoPai>()
+        if (AndroidUtils.isInternetDisponivel()) {
+            val url = "$host/disciplinas"
+            val json = HttpHelper.get(url)
+            agendamentos = parserJson(json)
+            // salvar offline
+            for (a in agendamentos) {
+                saveOffline(a)
+            }
+            return agendamentos
+        } else {
+            val dao = DatabaseManager.getAgendamentoDAO()
+            val agendamentos = dao.findAll()
+            return agendamentos
+        }
 
-        a.nome = "Transporte Produtos Perigosos"
-        a.categoria = "4"
-        a.foto = "https://www.vistocar.com.br/template/imagens/img-home-4.png"
-        agendamentos.add(a)
-
-        a.nome = "Inspeção Mercosul (CITV)"
-        a.categoria = "5"
-        a.foto = "http://www.vistocar.com.br/template/imagens/img-home-5.png"
-        agendamentos.add(a)
-
-        a.nome = "Alvarás de Taxis e Escolares"
-        a.categoria = "6"
-        a.foto = "http://www.vistocar.com.br/template/imagens/img-home-6.png"
-        agendamentos.add(a)
-
-        return agendamentos
     }
 
+    fun getAgendamentos (context: Context, id: Long): AgendamentoPai? {
+
+        if (AndroidUtils.isInternetDisponivel()) {
+            val url = "$host/disciplinas/${id}"
+            val json = HttpHelper.get(url)
+            val agendamentos = parserJson<AgendamentoPai>(json)
+
+            return agendamentos
+        } else {
+            val dao = DatabaseManager.getAgendamentoDAO()
+            val agendamentos = dao.getById(id)
+            return agendamentos
+        }
+
+    }
+
+    fun save(agendamento: AgendamentoPai): Response {
+        if (AndroidUtils.isInternetDisponivel()) {
+            val json = HttpHelper.post("$host/disciplinas", agendamento.toJson())
+            return parserJson(json)
+        }
+        else {
+            saveOffline(agendamento)
+            return Response("OK", "Agendamento salvo no dispositivo")
+        }
+    }
+
+    fun saveOffline(agendamento: AgendamentoPai) : Boolean {
+        val dao = DatabaseManager.getAgendamentoDAO()
+
+        if (! existeAgendamento(agendamento)) {
+            dao.insert(agendamento)
+        }
+
+        return true
+
+    }
+
+    fun existeAgendamento(agendamento: AgendamentoPai): Boolean {
+        val dao = DatabaseManager.getAgendamentoDAO()
+        return dao.getById(agendamento.id) != null
+    }
+
+    fun delete(agendamento: AgendamentoPai): Response {
+        if (AndroidUtils.isInternetDisponivel()) {
+            val url = "$host/disciplinas/${agendamento.id}"
+            val json = HttpHelper.delete(url)
+
+            return parserJson(json)
+        } else {
+            val dao = DatabaseManager.getAgendamentoDAO()
+            dao.delete(agendamento)
+            return Response(status = "OK", msg = "Dados salvos localmente")
+        }
+
+    }
+
+    inline fun <reified T> parserJson(json: String): T {
+        val type = object : TypeToken<T>(){}.type
+        return Gson().fromJson<T>(json, type)
+    }
 }

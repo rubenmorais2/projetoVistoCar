@@ -11,18 +11,20 @@ import android.widget.TextView
 import com.squareup.picasso.Picasso
 
 
-class AgendamentoAdapter (val agendamentos: List<agendamento>, val onClick: (agendamento) ->Unit
+class AgendamentoAdapter (val agendamentos: List<AgendamentoPai>, val onClick: (AgendamentoPai) ->Unit
 ): RecyclerView.Adapter<AgendamentoAdapter.AgendamentosViewHolder>() {
 
     class AgendamentosViewHolder(view: View): RecyclerView.ViewHolder(view){
         val cardNome: TextView
         val cardImage: ImageView
         val cardView: CardView
+        val frase: TextView
 
         init {
             cardNome = view.findViewById(R.id.cardNome)
             cardImage = view.findViewById(R.id.cardImage)
             cardView = view.findViewById(R.id.CardViewAgendamento)
+            frase = view.findViewById(R.id.frase)
         }
     }
 
@@ -40,11 +42,12 @@ class AgendamentoAdapter (val agendamentos: List<agendamento>, val onClick: (age
     override fun onBindViewHolder(holder: AgendamentosViewHolder, position: Int) {
         val context = holder.itemView.context
 
-        val produto = agendamentos[position]
+        val agendamento = agendamentos[position]
 
-        holder.cardNome.text = produto.nome
+        holder.cardNome.text = agendamento.nome
+        holder.frase.text = agendamento.text
 
-        Picasso.with(context).load(produto.foto).fit().into(
+        Picasso.with(context).load(agendamento.foto).fit().into(
             holder.cardImage,
             object: com.squareup.picasso.Callback {
                 override fun onSuccess() {
@@ -55,7 +58,7 @@ class AgendamentoAdapter (val agendamentos: List<agendamento>, val onClick: (age
             }
         )
 
-        holder.itemView.setOnClickListener{ onClick(agendamento())}
+        holder.itemView.setOnClickListener{ onClick(AgendamentoPai())}
     }
 }
 

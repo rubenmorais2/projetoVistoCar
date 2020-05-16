@@ -3,11 +3,11 @@ package com.ruben.vistocar
 import android.content.SharedPreferences
 
 object Prefs {
-    val PREF_ID = "LMS"
+    val PREF_ID = "VSC"
 
     // retorna o armazém de preferências PREF_ID
     private fun prefs(): SharedPreferences {
-        val context = LMSApplication.getInstance().applicationContext
+        val context = VistoCarApplication.getInstance().applicationContext
         return context.getSharedPreferences(PREF_ID, 0)
     }
 

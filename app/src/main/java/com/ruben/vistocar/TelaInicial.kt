@@ -3,7 +3,6 @@ package com.ruben.vistocar
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -14,7 +13,6 @@ import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.login.*
 import kotlinx.android.synthetic.main.tela_inicial.*
 import kotlinx.android.synthetic.main.toolbar.*
 
@@ -22,7 +20,7 @@ class TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedList
 
     private val context: Context get() = this
 
-    private var agendamentos = listOf<agendamento>()
+    private var agendamentos = listOf<AgendamentoPai>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,12 +43,16 @@ class TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedList
         taskAgendamentos()
     }
 
-    fun taskAgendamentos(){
-        agendamentos = ServicesAgendamento.getAgendamentos(context)
-        recyclerAgendamentos?.adapter = AgendamentoAdapter(agendamentos) {onClickAgendamento(it)}
+    fun taskAgendamentos() {
+        Thread {
+            this.agendamentos = ServicesAgendamento.getAgendamentos(context)
+            runOnUiThread {
+                recyclerAgendamentos?.adapter = AgendamentoAdapter(agendamentos) { onClickAgendamento() }
+            }
+        }.start()
     }
 
-    fun onClickAgendamento(agendamento: agendamento){
+    fun onClickAgendamento() {
     }
 
     fun cliqueSair() {
@@ -99,9 +101,9 @@ class TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedList
     private fun configuraMenuLateral() {
 
         // ícone de menu (hamburger) para mostrar o menu
-        var toogle = ActionBarDrawerToggle(this, layoutMenuLateral, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+        var toogle = ActionBarDrawerToggle(this, layout_menu_lateral, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
 
-        layoutMenuLateral.addDrawerListener(toogle)
+        layout_menu_lateral.addDrawerListener(toogle)
         toogle.syncState()
 
         menu_lateral.setNavigationItemSelectedListener(this)
@@ -110,22 +112,108 @@ class TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedList
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_agendamento -> {
+                Toast.makeText(this, "Clicou em Agendamento", Toast.LENGTH_SHORT).show()
                 var intent = Intent(this, CriarAgendamento ::class.java)
                 startActivity(intent)
             }
 
             R.id.nav_perfil -> {
                 Toast.makeText(this, "Clicou no Perfil", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, Perfil ::class.java)
+                startActivity(intent)
             }
-
+            R.id.fale_conosco -> {
+                Toast.makeText(this, "Clicou em Fale Conosco", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, FaleConosco::class.java)
+                startActivity(intent)
+            }
+            R.id.services -> {
+                Toast.makeText(this, "Clicou em Serviços", Toast.LENGTH_SHORT).show()
+            }
+            R.id.veiculos -> {
+                Toast.makeText(this, "Clicou em Veículos", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, Recuperados::class.java)
+                startActivity(intent)
+            }
+            R.id.modificados -> {
+                Toast.makeText(this, "Clicou em Modificados", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, Modificados::class.java)
+                startActivity(intent)
+            }
+            R.id.gas -> {
+                Toast.makeText(this, "Clicou em Gás", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, Gas::class.java)
+                startActivity(intent)
+            }
+            R.id.transporte -> {
+                Toast.makeText(this, "Clicou em Transporte", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, Transporte::class.java)
+                startActivity(intent)
+            }
+            R.id.alvaras -> {
+                Toast.makeText(this, "Clicou em Alváras", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, Alvaras::class.java)
+                startActivity(intent)
+            }
+            R.id.inspecaoM -> {
+                Toast.makeText(this, "Clicou em Inspeção Mercosul", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, InspecaoMercosul::class.java)
+                startActivity(intent)
+            }
+            R.id.inspecaoS -> {
+                Toast.makeText(this, "Clicou em Inspeção de Segurança", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, InspecaoSeguranca::class.java)
+                startActivity(intent)
+            }
+            R.id.inspecaoQ -> {
+                Toast.makeText(this, "Clicou em Inspeção de Qualidade", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, InspecaoQualidade::class.java)
+                startActivity(intent)
+            }
+            R.id.fretamento -> {
+                Toast.makeText(this, "Clicou em Fretamento", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, Fretamento::class.java)
+                startActivity(intent)
+            }
+            R.id.homologacao -> {
+                Toast.makeText(this, "Clicou em Homologação", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, Homologacao::class.java)
+                startActivity(intent)
+            }
+            R.id.insencao -> {
+                Toast.makeText(this, "Clicou em Insenção", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, InsencaoIPVA::class.java)
+                startActivity(intent)
+            }
+            R.id.acessibilidade -> {
+                Toast.makeText(this, "Clicou em Acessibilidade", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, Acessibilidade::class.java)
+                startActivity(intent)
+            }
+            R.id.caminhoes -> {
+                Toast.makeText(this, "Clicou em Caminhões", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, Caminhoes::class.java)
+                startActivity(intent)
+            }
+            R.id.importacao -> {
+                Toast.makeText(this, "Clicou em Importação", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, ProcessoImportacao::class.java)
+                startActivity(intent)
+            }
+            R.id.grupo -> {
+                Toast.makeText(this, "Clicou em O Grupo", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, SobreNos::class.java)
+                startActivity(intent)
+            }
             R.id.nav_sair -> {
+                Toast.makeText(this, "Obrigado Pela Visita.", Toast.LENGTH_SHORT).show()
                 finish()
             }
 
         }
 
         // fecha menu depois de tratar o evento
-        layoutMenuLateral.closeDrawer(GravityCompat.START)
+        layout_menu_lateral.closeDrawer(GravityCompat.START)
         return true
     }
 

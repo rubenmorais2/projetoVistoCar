@@ -8,13 +8,13 @@ import com.google.gson.GsonBuilder
 import java.io.Serializable
 
 @Entity(tableName = "agendamento")
-class agendamento: Serializable {
+class AgendamentoPai: Serializable {
 
     @PrimaryKey
     var id: Long = 0
     var nome: String = ""
-    var categoria: String = ""
     var foto: String = ""
+    var text: String = ""
 
     override fun toString(): String {
         return "Agendamento(nome'$nome')"

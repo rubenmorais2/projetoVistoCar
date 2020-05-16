@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.ruben.vistocar">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:allowBackup="true"
+        android:name=".VistoCarApplication"
         android:icon="@mipmap/ic_launcher_vistocar_round"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_vistocar_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,12 +19,69 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DebugActivity"/>
-        <activity android:name=".Prefs" />
-        <activity android:name=".LMSApplication" />
-        <activity android:name=".CriarAgendamento" />
-        <activity android:name=".agendamento" />
-        <activity android:name=".TelaInicial" android:theme="@style/AppTheme.Toolbar"></activity>
+        <activity
+            android:name=".AgendamentoPai" />
+        <activity
+            android:name=".DebugActivity" />
+        <activity
+            android:name=".Prefs" />
+        <activity
+            android:name=".ProcessoImportacao"
+            android:theme="@style/AppTheme.Toolbar"/>
+        <activity
+            android:name=".Caminhoes"
+            android:theme="@style/AppTheme.Toolbar"/>
+        <activity
+            android:name=".Acessibilidade"
+            android:theme="@style/AppTheme.Toolbar"/>
+        <activity
+            android:name=".InsencaoIPVA"
+            android:theme="@style/AppTheme.Toolbar"/>
+        <activity
+            android:name=".InspecaoQualidade"
+            android:theme="@style/AppTheme.Toolbar"/>
+        <activity
+            android:name=".Homologacao"
+            android:theme="@style/AppTheme.Toolbar"/>
+        <activity
+            android:name=".Fretamento"
+            android:theme="@style/AppTheme.Toolbar"/>
+        <activity
+            android:name=".InspecaoSeguranca"
+            android:theme="@style/AppTheme.Toolbar"/>
+        <activity
+            android:name=".InspecaoMercosul"
+            android:theme="@style/AppTheme.Toolbar"/>
+        <activity
+            android:name=".Alvaras"
+            android:theme="@style/AppTheme.Toolbar"/>
+        <activity
+            android:name=".Transporte"
+            android:theme="@style/AppTheme.Toolbar" />
+        <activity
+            android:name=".Gas"
+            android:theme="@style/AppTheme.Toolbar" />
+        <activity
+            android:name=".Modificados"
+            android:theme="@style/AppTheme.Toolbar" />
+        <activity
+            android:name=".Recuperados"
+            android:theme="@style/AppTheme.Toolbar" />
+        <activity
+            android:name=".FaleConosco"
+            android:theme="@style/AppTheme.Toolbar" />
+        <activity
+            android:name=".SobreNos"
+            android:theme="@style/AppTheme.Toolbar" />
+        <activity
+            android:name=".Perfil"
+            android:theme="@style/AppTheme.Toolbar" />
+        <activity
+            android:name=".CriarAgendamento"
+            android:theme="@style/AppTheme.Toolbar" />
+        <activity
+            android:name=".TelaInicial"
+            android:theme="@style/AppTheme.Toolbar" />
     </application>
 
 </manifest>
