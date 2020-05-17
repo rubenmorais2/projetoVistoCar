@@ -1,13 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:id="@+id/acessibilidade"
     android:layout_height="match_parent"
-    tools:context=".Acessibilidade"
-    android:orientation="vertical">
+    android:id="@+id/acessibilidade">
 
-    <include layout="@layout/toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <include layout="@layout/toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            tools:ignore="ScrollViewCount">
+
+            <TextView
+                android:layout_width="370dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="80dp"
+                android:text="@string/quando"
+                android:textAlignment="center"
+                android:textColor="#4b4b4b"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+            
+            <TextView
+                android:layout_width="370dp"
+                android:layout_height="260dp"
+                android:layout_marginLeft="-370dp"
+                android:layout_marginTop="250dp"
+                android:text="@string/necessario"
+                android:textAlignment="center"
+                android:textColor="#4b4b4b"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+
+        </ScrollView>
+    </LinearLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

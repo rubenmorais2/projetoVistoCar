@@ -55,9 +55,10 @@ class AgendamentoAdapter (val agendamentos: List<AgendamentoPai>, val onClick: (
 
                 override fun onError() {
                 }
-            })
+            }
+        )
 
-        holder.itemView.setOnClickListener{ onClick(agendamento)}
+        holder.itemView.setOnClickListener{ onClick(AgendamentoPai())}
     }
 }
 

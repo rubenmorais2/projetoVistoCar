@@ -12,10 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_vistocar_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TabelaPrecos"></activity>
-        <activity
-            android:name=".Gas"
-            android:theme="@style/AppTheme.Toolbar" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +23,9 @@
         <activity android:name=".AgendamentoPai" />
         <activity android:name=".DebugActivity" />
         <activity android:name=".Prefs" />
+        <activity
+            android:name=".MeusAgendamentos"
+            android:theme="@style/AppTheme.Toolbar"/>
         <activity
             android:name=".ProcessoImportacao"
             android:theme="@style/AppTheme.Toolbar" />
@@ -58,6 +58,9 @@
             android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name=".Transporte"
+            android:theme="@style/AppTheme.Toolbar" />
+        <activity
+            android:name=".Gas"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name=".Modificados"
