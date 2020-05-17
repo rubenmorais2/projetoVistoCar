@@ -25,8 +25,8 @@ object ServicesAgendamento {
             return agendamentos
         } else {
             val dao = DatabaseManager.getAgendamentoDAO()
-            val agendamentos = dao.findAll()
-            return agendamentos
+            val agendamento = dao.findAll()
+            return agendamento
         }
 
     }

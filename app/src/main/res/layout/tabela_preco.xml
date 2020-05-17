@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/preco"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!--Conteúdo da tela-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="700dp">
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:background="#4d4d4d"
+                android:textColor="#FFFFFF"
+                android:text="Valores e Tempos de Inspeção"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="25dp"
+                android:background="#f2f2f2"/>
+
+
+        </ScrollView>
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
