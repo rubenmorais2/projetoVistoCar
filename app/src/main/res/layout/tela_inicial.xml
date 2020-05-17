@@ -11,7 +11,7 @@
     <!--Conteúdo da tela-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:context=".TelaInicial">
 
@@ -19,7 +19,7 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="700dp">
+            android:layout_height="750dp">
 
             <!-- Colocar cardview com as disciplinas-->
             <androidx.recyclerview.widget.RecyclerView

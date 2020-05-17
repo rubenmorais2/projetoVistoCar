@@ -42,4 +42,18 @@
 ¹Dar baixa na restrição junto ao Detran;
 ²Emissão do CSV ou constatação dos itens não conformes;
 ³Garantir a perfeita segurança para transitar em vias publicas.</string>
+    <string name="taxis">Táxis - Verificação do atendimento à legislação municipal vigente, em veículo autorizado a operar no sistema de transporte urbano de passageiros e individual, na modalidade 
+        taxi, para permissionários e condutores, atendendo à Decretos-Leis e Portarias das Prefeituras do Municipio de São Paulo e Guarulhos. Para os veículos aprovados é emitido Comprovante de Execução 
+        de Inspeção de aprovação e liberado no sistema junto a Secretaria Municipal de Transportes do Município de São Paulo SMT / DTP e Guarulhos.</string>
+    <string name="moto_frete">Moto-Frete – Carga - Veículo para prestação de serviço de entrega e coleta de pequenas cargas, mediante a utilização de motociclistas no Município de São Paulo.</string>
+    <string name="transporte_escolar">Transporte Escolar - Veículo autorizado a operar no sistema de transporte urbano de passageiros, coletivo, modalidade transporte escolar. Para os veículos aprovados
+        é emitido Comprovante de Execução de Inspeção de aprovação e liberado no sistema junto a Secretaria Municipal de Transportes do Município de São Paulo SMT / DTP e Guarulhos.</string>
+    <string name="quando">"Quando deve ser feito?" Todos os ônibus urbanos e rodoviários devem ser adaptados para a acessibilidade de pessoas com necessidades especiais e inspecionados para fins de legalização junto ao Detran.</string>
+    <string name="necessario">O que é necessário para realizar? Na maior parte dos casos esta inspeção pode ser feita “in loco”, na própria garagem da empresa. Deve ser apresentada a identidade ou habilitação do proprietário (ou responsável),
+        o documento atual do veículo e nota(s) fiscal(is) ou declaração(ões) do fabricante da carroceria provando sua acessibilidade original de fábrica. Quando não original, a instalação do elevador requer autorização prévia do Detran e inspeção
+        de modificação em uma das unidades do Grupo Visto-Car.</string>
+    <string name="documentos">Quais o(s) documento(s) gerados ao final? Caso aprovado será emitido o CSV – Certificado de Segurança Veicular, o CI – Certificado de Inspeção, respectivamente documentos do Denatran e Inmetro afirmando que o veículo
+        está em conformidade com a lei, além do Selo de Acessibilidade, obrigatório para fins de fiscalização. Se reprovado o RNC – Relatório de Não Conformidades com todos os defeitos do veículo, com isso o proprietário terá 30 dias para corrigir
+        e retornar sem nenhum custo adicional.</string>
+    <string name="seguida">"O que fazer em seguida?" Encaminhar o CSV, em conjunto com formulário e comprovantes de recolhimento de taxas de alteração de dados e vistoria, ao Detran, que por sua vez emitirá novos documentos para fins de regularização do veículo.</string>
 </resources>

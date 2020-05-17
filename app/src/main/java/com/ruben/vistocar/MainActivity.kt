@@ -9,20 +9,17 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.biometric.BiometricPrompt
-import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.login.*
 import kotlinx.android.synthetic.main.menu_lateral_tela_inicial.*
-import java.util.concurrent.Executor
 
 class MainActivity : DebugActivity() {
-
 
     private val context: Context get() = this
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
+
 
         supportActionBar?.title = ""
 
@@ -51,8 +48,6 @@ class MainActivity : DebugActivity() {
             checkBox.isChecked = lembrar
         }
     }
-
-
 
     fun onClickLogin(){
 

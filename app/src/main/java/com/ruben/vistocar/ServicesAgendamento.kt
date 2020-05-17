@@ -9,13 +9,13 @@ object ServicesAgendamento {
 
 
 
-    val host = "https://fesousa.pythonanywhere.com"
+    val host = "https://rubenmorais2.pythonanywhere.com"
     val TAG = "AppVistoCar"
 
     fun getAgendamentos (context: Context): List<AgendamentoPai> {
         var agendamentos = ArrayList<AgendamentoPai>()
         if (AndroidUtils.isInternetDisponivel()) {
-            val url = "$host/disciplinas"
+            val url = "$host/agendamentos"
             val json = HttpHelper.get(url)
             agendamentos = parserJson(json)
             // salvar offline
@@ -25,8 +25,8 @@ object ServicesAgendamento {
             return agendamentos
         } else {
             val dao = DatabaseManager.getAgendamentoDAO()
-            val agendamento = dao.findAll()
-            return agendamento
+            val agendamentos = dao.findAll()
+            return agendamentos
         }
 
     }
@@ -34,7 +34,7 @@ object ServicesAgendamento {
     fun getAgendamentos (context: Context, id: Long): AgendamentoPai? {
 
         if (AndroidUtils.isInternetDisponivel()) {
-            val url = "$host/disciplinas/${id}"
+            val url = "$host/agendamentos/${id}"
             val json = HttpHelper.get(url)
             val agendamentos = parserJson<AgendamentoPai>(json)
 
@@ -49,7 +49,7 @@ object ServicesAgendamento {
 
     fun save(agendamento: AgendamentoPai): Response {
         if (AndroidUtils.isInternetDisponivel()) {
-            val json = HttpHelper.post("$host/disciplinas", agendamento.toJson())
+            val json = HttpHelper.post("$host/agendamentos", agendamento.toJson())
             return parserJson(json)
         }
         else {
@@ -76,7 +76,7 @@ object ServicesAgendamento {
 
     fun delete(agendamento: AgendamentoPai): Response {
         if (AndroidUtils.isInternetDisponivel()) {
-            val url = "$host/disciplinas/${agendamento.id}"
+            val url = "$host/agendamentos/${agendamento.id}"
             val json = HttpHelper.delete(url)
 
             return parserJson(json)
