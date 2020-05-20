@@ -6,6 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
+import kotlinx.android.synthetic.main.meus_agendamentos.*
 import kotlinx.android.synthetic.main.toolbar.*
 
 class Acessibilidade : AppCompatActivity() {
