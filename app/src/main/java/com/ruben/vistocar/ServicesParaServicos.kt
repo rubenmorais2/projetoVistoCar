@@ -18,12 +18,12 @@ object ServicesParaServicos {
         if (AndroidUtils.isInternetDisponivel()) {
             val url = "$host/servicos"
             val json = HttpHelper.get(url)
-            Log.d(TAG, json)
             servicos = parserJson(json)
             // salvar offline
             for (a in servicos) {
                 saveOffline(a)
             }
+            Log.d(TAG, json)
             return servicos
         } else {
             val dao = DatabaseManager.getServicosDAO()

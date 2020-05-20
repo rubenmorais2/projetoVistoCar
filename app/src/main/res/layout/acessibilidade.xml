@@ -23,27 +23,47 @@
 
             <TextView
                 android:layout_width="370dp"
-                android:layout_height="120dp"
-                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="80dp"
                 android:text="@string/quando"
                 android:textAlignment="center"
                 android:textColor="#4b4b4b"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textStyle="bold"/>
             
             <TextView
                 android:layout_width="370dp"
-                android:layout_height="260dp"
-                android:layout_marginLeft="-370dp"
-                android:layout_marginTop="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/necessario"
                 android:textAlignment="center"
                 android:textColor="#4b4b4b"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textStyle="bold"/>
 
+        <TextView
+            android:layout_width="370dp"
+            android:layout_height="260dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/documentos"
+            android:textAlignment="center"
+            android:textColor="#4b4b4b"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
 
+        <TextView
+            android:layout_width="370dp"
+            android:layout_height="260dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/seguida"
+            android:textAlignment="center"
+            android:textColor="#4b4b4b"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
 
     </LinearLayout>
     </ScrollView>
