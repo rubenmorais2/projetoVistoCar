@@ -41,7 +41,7 @@ class MeusAgendamentos : AppCompatActivity() {
 
     fun taskAgendamentos(){
         Thread {
-            this.agendamento = AgendamentoService.getAgendamentos(context)
+            agendamento = AgendamentoService.getAgendamentos(context)
             runOnUiThread{
                 recyclerAgendar?.adapter = AgendamentoAdapter(agendamento) {onClickAgendamentos(it)}
             }
@@ -52,7 +52,6 @@ class MeusAgendamentos : AppCompatActivity() {
         Toast.makeText(context, "Clicou Agendamento ${agendamento.nome}", Toast.LENGTH_SHORT).show()
         val intent = Intent(context, AgendandoAgendar::class.java)
         startActivityForResult(intent, REQUEST_REMOVE)
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
