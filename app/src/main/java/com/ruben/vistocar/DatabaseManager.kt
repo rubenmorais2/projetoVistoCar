@@ -13,7 +13,7 @@ object DatabaseManager {
         ).build()
     }
 
-    fun getAgendamentoDAO(): AgendamentoDAO {
-        return dbInstace.agendamentoDAO()
+    fun getServicosDAO(): ServicosDAO {
+        return dbInstace.servicosDAO()
     }
 }

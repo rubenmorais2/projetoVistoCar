@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_remover"
+        android:title="Remover Agendamento"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/adicionar"
+        android:title="Adicionar"
+        android:icon="@drawable/adicionar"
+        app:showAsAction="ifRoom" />
+
+</menu>
