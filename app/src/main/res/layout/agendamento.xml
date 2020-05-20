@@ -11,33 +11,68 @@
     <include layout="@layout/toolbar"/>
 
     <EditText
-        android:id="@+id/nomeAgendamento"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/modelo"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/form2"
+        android:textAlignment="center"
         android:ems="10"
-        android:hint="Nome"
+        android:hint="Modelo do Carro"
         android:inputType="textPersonName"/>
 
     <EditText
-        android:id="@+id/agendamento"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:id="@+id/marca"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/form_sedan"
+        android:textAlignment="center"
         android:ems="10"
-        android:hint="Ementa"
+        android:hint="Marca do Carro"
         android:inputType="textMultiLine" />
 
     <EditText
-        android:id="@+id/data"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/tipoServico"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/form_sedan"
+        android:textAlignment="center"
         android:ems="10"
-        android:hint="Horário"
-        android:inputType="textPersonName" />
+        android:hint="Tipo do Serviço"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/horario"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/form_sedan"
+        android:ems="10"
+        android:hint="11:00"
+        android:inputType="numberSigned|number|textPersonName|time"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/data"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/form4"
+        android:ems="10"
+        android:hint="00/00/0000"
+        android:inputType="date|numberSigned|number|textPersonName"
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/salvarAgendamento"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/form_hact"
         android:text="salvar" />
 
 

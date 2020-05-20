@@ -12,7 +12,7 @@
     Definindo bordas de 1dp de espessurae na cor cinza
     -->
     <stroke
-        android:color="#16000000"
+        android:color="#000070"
         android:width="1dp"/>
 
     <!--

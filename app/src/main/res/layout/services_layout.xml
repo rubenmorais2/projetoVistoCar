@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/CardViewAgendamento"
+    android:layout_margin="6dp"
+    app:cardElevation="3dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="false"
+    app:cardCornerRadius="2dp"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="190dp"
+                android:id="@+id/cardImage"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <ProgressBar
+                android:id="@+id/cardProgress"
+                style="@android:style/Widget.ProgressBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="6dp"
+                android:visibility="invisible" />
+        </FrameLayout>
+        <TextView
+            android:id="@+id/cardNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:text="20dp"
+            android:textColor="#000000"
+            android:textSize="15dp"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/frase"
+        android:layout_marginTop="10dp"
+        android:layout_width="185dp"
+        android:layout_height="212dp"
+        android:layout_marginLeft="196dp"
+        android:textColor="#000070"
+        android:textSize="15dp"/>
+
+</androidx.cardview.widget.CardView>

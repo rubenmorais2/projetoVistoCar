@@ -4,23 +4,20 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.appcompat.widget.SearchView
 import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.servicos.*
 import kotlinx.android.synthetic.main.tela_inicial.*
 import kotlinx.android.synthetic.main.toolbar.*
 
 class TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    private val context: Context get() = this
 
-    private var agendamentos = listOf<AgendamentoPai>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,26 +30,6 @@ class TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedList
 
         configuraMenuLateral()
 
-        recyclerAgendamentos?.layoutManager = LinearLayoutManager(context)
-        recyclerAgendamentos?.itemAnimator = DefaultItemAnimator()
-        recyclerAgendamentos?.setHasFixedSize(true)
-    }
-
-    override fun onResume() {
-        super.onResume()
-        taskAgendamentos()
-    }
-
-    fun taskAgendamentos() {
-        Thread {
-            this.agendamentos = ServicesAgendamento.getAgendamentos(context)
-            runOnUiThread {
-                recyclerAgendamentos?.adapter = AgendamentoAdapter(agendamentos) { onClickAgendamento() }
-            }
-        }.start()
-    }
-
-    fun onClickAgendamento() {
     }
 
     fun cliqueSair() {
@@ -95,12 +72,10 @@ class TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedList
             }
             R.id.services -> {
                 Toast.makeText(this, "Clicou em Serviços", Toast.LENGTH_SHORT).show()
-            }
-            R.id.veiculos -> {
-                Toast.makeText(this, "Clicou em Veículos", Toast.LENGTH_SHORT).show()
-                var intent = Intent(this, Recuperados::class.java)
+                var intent = Intent(this, Servicos::class.java)
                 startActivity(intent)
             }
+
             R.id.modificados -> {
                 Toast.makeText(this, "Clicou em Modificados", Toast.LENGTH_SHORT).show()
                 var intent = Intent(this, Modificados::class.java)
@@ -116,11 +91,7 @@ class TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedList
                 var intent = Intent(this, Transporte::class.java)
                 startActivity(intent)
             }
-            R.id.alvaras -> {
-                Toast.makeText(this, "Clicou em Alváras", Toast.LENGTH_SHORT).show()
-                var intent = Intent(this, Alvaras::class.java)
-                startActivity(intent)
-            }
+
             R.id.inspecaoM -> {
                 Toast.makeText(this, "Clicou em Inspeção Mercosul", Toast.LENGTH_SHORT).show()
                 var intent = Intent(this, InspecaoMercosul::class.java)

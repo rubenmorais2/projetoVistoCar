@@ -1,69 +1,49 @@
 package com.ruben.vistocar
 
-
-import androidx.cardview.widget.CardView
-import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import com.squareup.picasso.Picasso
+import android.widget.EditText
+import androidx.cardview.widget.CardView
+import androidx.recyclerview.widget.RecyclerView
 
+class AgendamentoAdapter (val agendamento: List<AgendamentoPai>, val onClick: (AgendamentoPai) ->Unit
+): RecyclerView.Adapter<AgendamentoAdapter.AgendamentoViewHolder>() {
 
-class AgendamentoAdapter (val agendamentos: List<AgendamentoPai>, val onClick: (AgendamentoPai) ->Unit
-): RecyclerView.Adapter<AgendamentoAdapter.AgendamentosViewHolder>() {
-
-    class AgendamentosViewHolder(view: View): RecyclerView.ViewHolder(view){
-        val cardNome: TextView
-        val cardImage: ImageView
-        val cardView: CardView
-        val frase: TextView
+    class AgendamentoViewHolder(view: View): RecyclerView.ViewHolder(view){
+        val modelo: EditText
+        val marca: EditText
+        val tipoServico: EditText
+        val horario: EditText
+        val data: EditText
+        val meus_agendamentos: CardView
 
         init {
-            cardNome = view.findViewById(R.id.cardNome)
-            cardImage = view.findViewById(R.id.cardImage)
-            cardView = view.findViewById(R.id.CardViewAgendamento)
-            frase = view.findViewById(R.id.frase)
+            modelo = view.findViewById(R.id.modelo)
+            marca = view.findViewById(R.id.marca)
+            tipoServico = view.findViewById(R.id.tipoServico)
+            horario = view.findViewById(R.id.horario)
+            data = view.findViewById(R.id.data)
+            meus_agendamentos = view.findViewById(R.id.MyAgendamentos)
+
         }
     }
 
-    // Quantidade de disciplinas na lista
+    override fun getItemCount() = this.agendamento.size
 
-    override fun getItemCount() = this.agendamentos.size
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AgendamentoAdapter.AgendamentoViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.layout_meus_agendamentos, parent, false)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AgendamentosViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.agendamento_services, parent, false)
-
-        val holder = AgendamentosViewHolder(view)
+        val holder = AgendamentoAdapter.AgendamentoViewHolder(view)
         return holder
     }
 
-    override fun onBindViewHolder(holder: AgendamentosViewHolder, position: Int) {
-        val context = holder.itemView.context
+        override fun onBindViewHolder(holder: AgendamentoAdapter.AgendamentoViewHolder, position: Int) {
+            val context = holder.itemView.context
 
-        val agendamento = agendamentos[position]
+            val agendamento = agendamento[position]
 
-        holder.cardNome.text = agendamento.nome
-        holder.frase.text = agendamento.text
-
-        Picasso.with(context).load(agendamento.foto).fit().into(
-            holder.cardImage,
-            object: com.squareup.picasso.Callback {
-                override fun onSuccess() {
-                }
-
-                override fun onError() {
-                }
-            }
-        )
-
-        holder.itemView.setOnClickListener{ onClick(AgendamentoPai())}
-    }
+            holder.itemView.setOnClickListener{ onClick(agendamento)}
+        }
 }
-
-
-
-
-
-

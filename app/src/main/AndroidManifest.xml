@@ -20,12 +20,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AgendamentoPai" />
+        <activity android:name=".ServicosPai" />
         <activity android:name=".DebugActivity" />
         <activity android:name=".Prefs" />
         <activity
-            android:name=".MeusAgendamentos"
+            android:name=".AgendandoAgendar"
             android:theme="@style/AppTheme.Toolbar"/>
+        <activity
+            android:name=".Servicos"
+            android:theme="@style/AppTheme.Toolbar" />
+        <activity
+            android:name=".MeusAgendamentos"
+            android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name=".ProcessoImportacao"
             android:theme="@style/AppTheme.Toolbar" />
