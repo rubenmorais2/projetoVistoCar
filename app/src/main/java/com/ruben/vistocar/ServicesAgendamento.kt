@@ -24,7 +24,7 @@ object ServicesAgendamento {
             }
             return agendamentos
         } else {
-            val dao = DatabaseManager.getAgendamentoDAO()
+            val dao = databaseManagerAgendar.getAgendamentoDAO()
             val agendamentos = dao.findAll()
             return agendamentos
         }
@@ -40,7 +40,7 @@ object ServicesAgendamento {
 
             return agendamentos
         } else {
-            val dao = DatabaseManager.getAgendamentoDAO()
+            val dao = databaseManagerAgendar.getAgendamentoDAO()
             val agendamentos = dao.getById(id)
             return agendamentos
         }
@@ -48,18 +48,12 @@ object ServicesAgendamento {
     }
 
     fun save(agendamento: AgendamentoPai): Response {
-        if (AndroidUtils.isInternetDisponivel()) {
             val json = HttpHelper.post("$host/agendamentos", agendamento.toJson())
             return parserJson(json)
         }
-        else {
-            saveOffline(agendamento)
-            return Response("OK", "Agendamento salvo no dispositivo")
-        }
-    }
 
     fun saveOffline(agendamento: AgendamentoPai) : Boolean {
-        val dao = DatabaseManager.getAgendamentoDAO()
+        val dao = databaseManagerAgendar.getAgendamentoDAO()
 
         if (! existeAgendamento(agendamento)) {
             dao.insert(agendamento)
@@ -70,21 +64,16 @@ object ServicesAgendamento {
     }
 
     fun existeAgendamento(agendamento: AgendamentoPai): Boolean {
-        val dao = DatabaseManager.getAgendamentoDAO()
+        val dao = databaseManagerAgendar.getAgendamentoDAO()
         return dao.getById(agendamento.id) != null
     }
 
     fun delete(agendamento: AgendamentoPai): Response {
-        if (AndroidUtils.isInternetDisponivel()) {
             val url = "$host/agendamentos/${agendamento.id}"
             val json = HttpHelper.delete(url)
 
             return parserJson(json)
-        } else {
-            val dao = DatabaseManager.getAgendamentoDAO()
-            dao.delete(agendamento)
-            return Response(status = "OK", msg = "Dados salvos localmente")
-        }
+
 
     }
 

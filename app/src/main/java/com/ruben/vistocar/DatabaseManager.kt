@@ -16,4 +16,6 @@ object DatabaseManager {
     fun getServicosDAO(): ServicosDAO {
         return dbInstace.servicosDAO()
     }
+
+
 }
