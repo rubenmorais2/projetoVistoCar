@@ -26,6 +26,11 @@
             android:icon="@drawable/servicos"
             android:title="Serviços"/>
 
+        <item
+            android:id="@+id/localizacao"
+            android:icon="@drawable/localizacao"
+            android:title="Nossa Localização"/>
+
     </group>
         <item android:title="">
             <menu>

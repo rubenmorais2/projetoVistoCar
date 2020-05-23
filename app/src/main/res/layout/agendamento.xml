@@ -11,7 +11,7 @@
     <include layout="@layout/toolbar"/>
 
     <EditText
-        android:id="@+id/modelo"
+        android:id="@+id/marca"
         android:layout_width="370dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
@@ -19,18 +19,18 @@
         android:background="@drawable/form2"
         android:textAlignment="center"
         android:ems="10"
-        android:hint="Modelo do Carro"
+        android:hint="Marca do Carro"
         android:inputType="textPersonName"/>
 
     <EditText
-        android:id="@+id/marca"
+        android:id="@+id/modelo"
         android:layout_width="370dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
         android:background="@drawable/form_sedan"
         android:textAlignment="center"
         android:ems="10"
-        android:hint="Marca do Carro"
+        android:hint="Modelo do Carro"
         android:inputType="textMultiLine" />
 
     <EditText

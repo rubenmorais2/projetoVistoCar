@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
     defaultConfig {
@@ -48,8 +48,8 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt "androidx.room:room-compiler:2.2.3"
     // Firebase
-    implementation 'com.google.firebase:firebase-core:16.0.1'
-    implementation 'com.google.firebase:firebase-messaging:17.3.2'
+    implementation 'com.google.firebase:firebase-core:17.4.2'
+    implementation 'com.google.firebase:firebase-messaging:20.2.0'
     implementation 'com.squareup.picasso:picasso:2.5.2'
     //Google play services
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
@@ -60,3 +60,8 @@ dependencies {
 
     testImplementation 'junit:junit:4.12'
 }
+//Firebase
+apply plugin: 'com.google.gms.google-services'
+
+//com.google.gms.googleservices.GoogleServicesPlugin.config.desableVersionCheck = true
+

@@ -24,6 +24,9 @@ class MeusAgendamentos : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.meus_agendamentos)
 
+        //if (intent.getSerializableExtra("agendamento") is AgendamentoPai)
+          //  agendamento = intent.getSerializableExtra("agendamento") as AgendamentoPai
+
         setSupportActionBar(toolbar)
 
         supportActionBar?.title = "Meus Agendamentos"
@@ -41,7 +44,7 @@ class MeusAgendamentos : AppCompatActivity() {
 
     fun taskAgendamentos(){
         Thread {
-            agendamento = AgendamentoService.getAgendamentos(context)
+            this.agendamento = AgendamentoService.getAgendamentos(context)
             runOnUiThread{
                 recyclerAgendar?.adapter = AgendamentoAdapter(agendamento) {onClickAgendamentos(it)}
             }
@@ -49,10 +52,11 @@ class MeusAgendamentos : AppCompatActivity() {
     }
 
     fun onClickAgendamentos(agendamento: AgendamentoPai) {
-        Toast.makeText(context, "Clicou Agendamento ${agendamento.nome}", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, "Clicou Agendamento ${agendamento.tipoServico}", Toast.LENGTH_SHORT).show()
         val intent = Intent(context, AgendandoAgendar::class.java)
         startActivityForResult(intent, REQUEST_REMOVE)
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_config, menu)

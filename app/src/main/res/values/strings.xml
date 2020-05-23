@@ -56,4 +56,8 @@
         está em conformidade com a lei, além do Selo de Acessibilidade, obrigatório para fins de fiscalização. Se reprovado o RNC – Relatório de Não Conformidades com todos os defeitos do veículo, com isso o proprietário terá 30 dias para corrigir
         e retornar sem nenhum custo adicional.</string>
     <string name="seguida">"O que fazer em seguida?" Encaminhar o CSV, em conjunto com formulário e comprovantes de recolhimento de taxas de alteração de dados e vistoria, ao Detran, que por sua vez emitirá novos documentos para fins de regularização do veículo.</string>
+    <string name="API_KEY">AIzaSyAy_9-DT87uQQ3fWwNDiQkRdHMLDJ0iG24</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.servicos.*
 import kotlinx.android.synthetic.main.tela_inicial.*
 import kotlinx.android.synthetic.main.toolbar.*
 
-class TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedListener {
+class  TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedListener {
 
 
 
@@ -76,70 +76,9 @@ class TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedList
                 startActivity(intent)
             }
 
-            R.id.modificados -> {
+            R.id.localizacao -> {
                 Toast.makeText(this, "Clicou em Modificados", Toast.LENGTH_SHORT).show()
-                var intent = Intent(this, Modificados::class.java)
-                startActivity(intent)
-            }
-            R.id.gas -> {
-                Toast.makeText(this, "Clicou em Gás", Toast.LENGTH_SHORT).show()
-                var intent = Intent(this, Gas::class.java)
-                startActivity(intent)
-            }
-            R.id.transporte -> {
-                Toast.makeText(this, "Clicou em Transporte", Toast.LENGTH_SHORT).show()
-                var intent = Intent(this, Transporte::class.java)
-                startActivity(intent)
-            }
-
-            R.id.inspecaoM -> {
-                Toast.makeText(this, "Clicou em Inspeção Mercosul", Toast.LENGTH_SHORT).show()
-                var intent = Intent(this, InspecaoMercosul::class.java)
-                startActivity(intent)
-            }
-            R.id.inspecaoS -> {
-                Toast.makeText(this, "Clicou em Inspeção de Segurança", Toast.LENGTH_SHORT).show()
-                var intent = Intent(this, InspecaoSeguranca::class.java)
-                startActivity(intent)
-            }
-            R.id.inspecaoQ -> {
-                Toast.makeText(this, "Clicou em Inspeção de Qualidade", Toast.LENGTH_SHORT).show()
-                var intent = Intent(this, InspecaoQualidade::class.java)
-                startActivity(intent)
-            }
-            R.id.fretamento -> {
-                Toast.makeText(this, "Clicou em Fretamento", Toast.LENGTH_SHORT).show()
-                var intent = Intent(this, Fretamento::class.java)
-                startActivity(intent)
-            }
-            R.id.homologacao -> {
-                Toast.makeText(this, "Clicou em Homologação", Toast.LENGTH_SHORT).show()
-                var intent = Intent(this, Homologacao::class.java)
-                startActivity(intent)
-            }
-            R.id.insencao -> {
-                Toast.makeText(this, "Clicou em Insenção", Toast.LENGTH_SHORT).show()
-                var intent = Intent(this, InsencaoIPVA::class.java)
-                startActivity(intent)
-            }
-            R.id.acessibilidade -> {
-                Toast.makeText(this, "Clicou em Acessibilidade", Toast.LENGTH_SHORT).show()
-                var intent = Intent(this, Acessibilidade::class.java)
-                startActivity(intent)
-            }
-            R.id.caminhoes -> {
-                Toast.makeText(this, "Clicou em Caminhões", Toast.LENGTH_SHORT).show()
-                var intent = Intent(this, Caminhoes::class.java)
-                startActivity(intent)
-            }
-            R.id.importacao -> {
-                Toast.makeText(this, "Clicou em Importação", Toast.LENGTH_SHORT).show()
-                var intent = Intent(this, ProcessoImportacao::class.java)
-                startActivity(intent)
-            }
-            R.id.grupo -> {
-                Toast.makeText(this, "Clicou em O Grupo", Toast.LENGTH_SHORT).show()
-                var intent = Intent(this, SobreNos::class.java)
+                var intent = Intent(this, MapasActivity::class.java)
                 startActivity(intent)
             }
             R.id.nav_sair -> {

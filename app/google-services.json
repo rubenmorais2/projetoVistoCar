@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "682316842529",
+    "firebase_url": "https://vistocar-96265.firebaseio.com",
+    "project_id": "vistocar-96265",
+    "storage_bucket": "vistocar-96265.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682316842529:android:33fb118894187e1693c560",
+        "android_client_info": {
+          "package_name": "com.ruben.vistocar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "682316842529-7eieijhth368ppts2ffjlsn2ed0gep02.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgTepQPZGxJ_ozmpneg-rNVQl_qKaL0ug"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "682316842529-7eieijhth368ppts2ffjlsn2ed0gep02.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

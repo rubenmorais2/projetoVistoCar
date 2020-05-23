@@ -5,15 +5,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.recyclerview.widget.DefaultItemAnimator
-import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.agendamento.*
-import kotlinx.android.synthetic.main.meus_agendamentos.*
 import kotlinx.android.synthetic.main.toolbar.*
 
 class CriarAgendamento : DebugActivity() {
 
     private val context: Context get() = this
+    private var agendamento = listOf<AgendamentoPai>()
     private var REQUEST_CADASTRO = 1
     private var REQUEST_REMOVE = 2
 
@@ -26,28 +24,43 @@ class CriarAgendamento : DebugActivity() {
         supportActionBar?.title = "Agendamento"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        recyclerAgendar?.layoutManager = LinearLayoutManager(context)
-        recyclerAgendar?.itemAnimator = DefaultItemAnimator()
-        recyclerAgendar?.setHasFixedSize(true)
-
         salvarAgendamento.setOnClickListener {
             val agendamento = AgendamentoPai()
+            //if (modelo.getText().length == 0)
+            //if (marca.getText().length == 0)
+            //if (tipoServico.getText().length == 0)
+            //if (horario.getText().length == 0)
+            //if (data.getText().length == 0){
+            //modelo.setError("Campo vazio")
+            //marca.setError("Campo vazio")
+            //tipoServico.setError("Campo vazio")
+            //horario.setError("Campo vazio")
+            //data.setError("Campo vazio")
+            //TextUtils.isEmpty(modelo.marca.tipoServico.horario.data.getText().toString().trim());modelo.setError("Campo vazio")
             agendamento.modelo = modelo.text.toString()
             agendamento.marca = marca.text.toString()
             agendamento.tipoServico = tipoServico.text.toString()
             agendamento.horario = horario.text.toString()
             agendamento.data = data.text.toString()
 
-            taskAtualizar(agendamento)
+
+            taskAgendamentos(agendamento)
         }
+
     }
-    private fun taskAtualizar(agendamento: AgendamentoPai) {
+    private fun taskAgendamentos(agendamento: AgendamentoPai) {
         Thread {
             AgendamentoService.save(agendamento)
             runOnUiThread{
                 finish()
             }
         }.start()
+    }
+
+    fun notificacao(agendamento: MatchGroup?){
+        val intent = Intent(this, MeusAgendamentos::class.java)
+
+        NotificationUtil.create(this, 1, intent, "Visto Car", "Você tem um novo agendamento")
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {

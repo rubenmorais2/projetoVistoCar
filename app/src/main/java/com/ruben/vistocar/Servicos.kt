@@ -7,7 +7,6 @@ import android.view.MenuItem
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.servicos.*
-import kotlinx.android.synthetic.main.tela_inicial.*
 import kotlinx.android.synthetic.main.toolbar.*
 
 class Servicos : AppCompatActivity() {

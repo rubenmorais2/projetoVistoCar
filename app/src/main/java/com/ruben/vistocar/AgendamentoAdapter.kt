@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -11,19 +12,19 @@ class AgendamentoAdapter (val agendamento: List<AgendamentoPai>, val onClick: (A
 ): RecyclerView.Adapter<AgendamentoAdapter.AgendamentoViewHolder>() {
 
     class AgendamentoViewHolder(view: View): RecyclerView.ViewHolder(view){
-        val modelo: EditText
-        val marca: EditText
-        val tipoServico: EditText
-        val horario: EditText
-        val data: EditText
+        val car: TextView
+        val brand: TextView
+        val kindService: TextView
+        val schedule: TextView
+        val formDate: TextView
         val meus_agendamentos: CardView
 
         init {
-            modelo = view.findViewById(R.id.modelo)
-            marca = view.findViewById(R.id.marca)
-            tipoServico = view.findViewById(R.id.tipoServico)
-            horario = view.findViewById(R.id.horario)
-            data = view.findViewById(R.id.data)
+            car = view.findViewById(R.id.carro)
+            brand = view.findViewById(R.id.model)
+            kindService = view.findViewById(R.id.typeService)
+            schedule = view.findViewById(R.id.time)
+            formDate = view.findViewById(R.id.date)
             meus_agendamentos = view.findViewById(R.id.MyAgendamentos)
 
         }
@@ -31,19 +32,24 @@ class AgendamentoAdapter (val agendamento: List<AgendamentoPai>, val onClick: (A
 
     override fun getItemCount() = this.agendamento.size
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AgendamentoAdapter.AgendamentoViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.layout_meus_agendamentos, parent, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):AgendamentoViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_meus_agendamentos, parent, false)
 
-        val holder = AgendamentoAdapter.AgendamentoViewHolder(view)
+        val holder = AgendamentoViewHolder(view)
         return holder
     }
 
-        override fun onBindViewHolder(holder: AgendamentoAdapter.AgendamentoViewHolder, position: Int) {
+        override fun onBindViewHolder(holder: AgendamentoViewHolder, position: Int) {
             val context = holder.itemView.context
 
-            val agendamento = agendamento[position]
+            val agendamentos = agendamento[position]
 
-            holder.itemView.setOnClickListener{ onClick(agendamento)}
+            holder.car.text = agendamentos.modelo
+            holder.brand.text = agendamentos.marca
+            holder.kindService.text = agendamentos.tipoServico
+            holder.schedule.text = agendamentos.horario
+            holder.formDate.text = agendamentos.data
+
+            holder.itemView.setOnClickListener{ onClick(AgendamentoPai())}
         }
 }
