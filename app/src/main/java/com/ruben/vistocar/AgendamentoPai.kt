@@ -9,16 +9,15 @@ class AgendamentoPai {
 
     @PrimaryKey
     var id: Long = 0
-    var nome: String = ""
-    var modelo: String = ""
     var marca: String = ""
+    var modelo: String = ""
     var tipoServico: String = ""
     var horario: String = ""
     var data: String = ""
 
 
     override fun toString(): String {
-        return "Agendamento(nome'$nome')"
+        return "Agendamento(nome'$tipoServico')"
     }
     fun toJson(): String {
         return GsonBuilder().create().toJson(this)

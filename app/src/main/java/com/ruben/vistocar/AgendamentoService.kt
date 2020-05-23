@@ -11,17 +11,15 @@ object AgendamentoService {
     val TAG = "AgendarApp"
 
     fun getAgendamentos (context: Context): List<AgendamentoPai> {
-        val agendamentos = mutableListOf<AgendamentoPai>()
+        var agendamentos = ArrayList<AgendamentoPai>()
         if (AndroidUtils.isInternetDisponivel()) {
             val url = "$host/agendamentos"
             val json = HttpHelper.get(url)
-
+            agendamentos = parserJson(json)
             // salvar offline
-            for (a in agendamentos) {
-                saveOffline(a)
+            for (d in agendamentos) {
+                saveOffline(d)
             }
-
-            Log.d(TAG, json)
             return agendamentos
         } else {
             val dao = databaseManagerAgendar.getAgendamentoDAO()
@@ -31,7 +29,7 @@ object AgendamentoService {
 
     }
 
-    fun getAgendamentos (context: Context, id: Long): AgendamentoPai? {
+    fun getAgendamento (context: Context, id: Long): AgendamentoPai? {
 
         if (AndroidUtils.isInternetDisponivel()) {
             val url = "$host/agendamentos/${id}"
@@ -47,42 +45,42 @@ object AgendamentoService {
 
     }
 
-    fun save(agendamento: AgendamentoPai): Response {
+    fun save(agendamentos: AgendamentoPai): Response {
         if (AndroidUtils.isInternetDisponivel()) {
-            val json = HttpHelper.post("$host/agendamentos", agendamento.toJson())
+            val json = HttpHelper.post("$host/agendamentos", agendamentos.toJson())
             return parserJson(json)
         }
         else {
-            saveOffline(agendamento)
+            saveOffline(agendamentos)
             return Response("OK", "Agendamento salvo no dispositivo")
         }
     }
 
-    fun saveOffline(agendamento: AgendamentoPai) : Boolean {
+    fun saveOffline(agendamentos: AgendamentoPai) : Boolean {
         val dao = databaseManagerAgendar.getAgendamentoDAO()
 
-        if (! existeAgendamento(agendamento)) {
-            dao.insert(agendamento)
+        if (! existeAgendamento(agendamentos)) {
+            dao.insert(agendamentos)
         }
 
         return true
 
     }
 
-    fun existeAgendamento(agendamento: AgendamentoPai): Boolean {
+    fun existeAgendamento(agendamentos: AgendamentoPai): Boolean {
         val dao = databaseManagerAgendar.getAgendamentoDAO()
-        return dao.getById(agendamento.id) != null
+        return dao.getById(agendamentos.id) != null
     }
 
-    fun delete(agendamento: AgendamentoPai): Response {
+    fun delete(agendamentos: AgendamentoPai): Response {
         if (AndroidUtils.isInternetDisponivel()) {
-            val url = "$host/agendamentos/${agendamento.id}"
+            val url = "$host/agendamentos/${agendamentos.id}"
             val json = HttpHelper.delete(url)
 
             return parserJson(json)
         } else {
             val dao = databaseManagerAgendar.getAgendamentoDAO()
-            dao.delete(agendamento)
+            dao.delete(agendamentos)
             return Response(status = "OK", msg = "Dados salvos localmente")
         }
 

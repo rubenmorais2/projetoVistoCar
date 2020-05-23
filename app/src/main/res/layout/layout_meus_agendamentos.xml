@@ -5,72 +5,82 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/MyAgendamentos"
-    android:layout_margin="6dp"
-    app:cardElevation="3dp"
     app:cardPreventCornerOverlap="false"
     app:cardUseCompatPadding="false"
     app:cardCornerRadius="2dp"
     android:foreground="?attr/selectableItemBackground">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="380dp"
+        android:layout_height="150dp"
+        android:id="@+id/linear"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/layout"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/carro"
-            android:layout_width="240dp"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:textColor="#000000"
+            android:textAlignment="center"
+            android:text="20dp"
             android:textSize="15sp"/>
 
         <TextView
-            android:id="@+id/modelo"
-            android:layout_width="240dp"
+            android:id="@+id/model"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:text="20dp"
+            android:textAlignment="center"
             android:layout_marginTop="5dp"
             android:textColor="#000000"
             android:textSize="15sp"/>
 
         <TextView
-            android:id="@+id/tipodeServico"
-            android:layout_width="240dp"
+            android:id="@+id/typeService"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:text="20dp"
             android:textColor="#000000"
             android:textSize="15sp"/>
 
         <TextView
-            android:id="@+id/horas"
-            android:layout_width="240dp"
+            android:id="@+id/time"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
+            android:text="20dp"
+            android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="15sp"/>
 
         <TextView
-            android:id="@+id/data"
-            android:layout_width="240dp"
+            android:id="@+id/date"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:textAlignment="center"
             android:layout_marginTop="5dp"
+            android:text="20dp"
             android:textColor="#000000"
             android:textSize="15sp"/>
 
+        <ImageView
+            android:id="@+id/imagem"
+            android:layout_width="120dp"
+            android:layout_marginTop="-120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="240dp"
+            android:background="@drawable/visto"
+            android:textSize="15sp" />
     </LinearLayout>
-    <ImageView
-        android:id="@+id/frase"
-        android:layout_marginTop="5dp"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="@drawable/visto"
-        android:layout_marginStart="260dp"
-        android:textColor="#000070"
-        android:textSize="15sp"/>
-
 </androidx.cardview.widget.CardView>

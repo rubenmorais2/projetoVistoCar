@@ -5,10 +5,6 @@
     <item android:id="@+id/action_remover"
         android:title="Remover Agendamento"
         app:showAsAction="never" />
-    <item
-        android:id="@+id/adicionar"
-        android:title="Adicionar"
-        android:icon="@drawable/adicionar"
-        app:showAsAction="ifRoom" />
+
 
 </menu>
