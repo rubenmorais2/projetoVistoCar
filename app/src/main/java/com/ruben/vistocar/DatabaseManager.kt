@@ -1,6 +1,6 @@
 package com.ruben.vistocar
 
-import androidx.room.Room
+import androidx.room.Room.databaseBuilder
 
 object DatabaseManager {
 
@@ -8,7 +8,7 @@ object DatabaseManager {
 
     init{
         val appContext= VistoCarApplication.getInstance().applicationContext
-        dbInstace = Room.databaseBuilder(
+        dbInstace = databaseBuilder(
             appContext, VistoCarDatabase::class.java, "car.sqlite"
         ).build()
     }
@@ -20,6 +20,4 @@ object DatabaseManager {
     fun getAgendamentoDAO(): AgendamentoDAO {
         return dbInstace.agendamentoDAO()
     }
-
-
 }
