@@ -20,9 +20,10 @@ object AgendamentoService {
             for (d in agendamentos) {
                 saveOffline(d)
             }
+            Log.d(TAG, json)
             return agendamentos
         } else {
-            val dao = databaseManagerAgendar.getAgendamentoDAO()
+            val dao = DatabaseManager.getAgendamentoDAO()
             val agendamentos = dao.findAll()
             return agendamentos
         }
@@ -38,7 +39,7 @@ object AgendamentoService {
 
             return agendamentos
         } else {
-            val dao = databaseManagerAgendar.getAgendamentoDAO()
+            val dao = DatabaseManager.getAgendamentoDAO()
             val agendamentos = dao.getById(id)
             return agendamentos
         }
@@ -57,7 +58,7 @@ object AgendamentoService {
     }
 
     fun saveOffline(agendamentos: AgendamentoPai) : Boolean {
-        val dao = databaseManagerAgendar.getAgendamentoDAO()
+        val dao = DatabaseManager.getAgendamentoDAO()
 
         if (! existeAgendamento(agendamentos)) {
             dao.insert(agendamentos)
@@ -68,7 +69,7 @@ object AgendamentoService {
     }
 
     fun existeAgendamento(agendamentos: AgendamentoPai): Boolean {
-        val dao = databaseManagerAgendar.getAgendamentoDAO()
+        val dao = DatabaseManager.getAgendamentoDAO()
         return dao.getById(agendamentos.id) != null
     }
 
@@ -79,7 +80,7 @@ object AgendamentoService {
 
             return parserJson(json)
         } else {
-            val dao = databaseManagerAgendar.getAgendamentoDAO()
+            val dao = DatabaseManager.getAgendamentoDAO()
             dao.delete(agendamentos)
             return Response(status = "OK", msg = "Dados salvos localmente")
         }

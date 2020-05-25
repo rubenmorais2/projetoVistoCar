@@ -17,5 +17,9 @@ object DatabaseManager {
         return dbInstace.servicosDAO()
     }
 
+    fun getAgendamentoDAO(): AgendamentoDAO {
+        return dbInstace.agendamentoDAO()
+    }
+
 
 }

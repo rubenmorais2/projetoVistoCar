@@ -18,7 +18,6 @@ import kotlinx.android.synthetic.main.toolbar.*
 class  TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedListener {
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tela_inicial)
@@ -30,7 +29,9 @@ class  TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedLis
 
         configuraMenuLateral()
 
+
     }
+
 
     fun cliqueSair() {
         val returnIntent = Intent();
