@@ -34,14 +34,12 @@ class Servicos : AppCompatActivity() {
         taskServicos()
     }
 
-    fun taskServicos() {
-        Thread {
-            this.servicos = ServicesParaServicos.getServicos(context)
-            runOnUiThread {
-                recyclerServicos?.adapter = ServicosAdapter(servicos) { onClickServicos() }
-            }
-        }.start()
-    }
+    fun taskServicos() = Thread {
+        this.servicos = ServicesParaServicos.getServicos(context)
+        runOnUiThread {
+            recyclerServicos?.adapter = ServicosAdapter(servicos) { onClickServicos() }
+        }
+    }.start()
 
     fun onClickServicos() {
     }

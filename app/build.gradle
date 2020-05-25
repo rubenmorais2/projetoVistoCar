@@ -44,9 +44,9 @@ dependencies {
     //OKHttp
     implementation 'com.squareup.okhttp3:okhttp:3.8.0'
     // Google Room - Banco de dados
-    implementation "androidx.room:room-runtime:2.2.3"
+    implementation "androidx.room:room-runtime:2.2.5"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    kapt "androidx.room:room-compiler:2.2.3"
+    kapt "androidx.room:room-compiler:2.2.5"
     // Firebase
     implementation 'com.google.firebase:firebase-core:17.4.2'
     implementation 'com.google.firebase:firebase-messaging:20.2.0'
@@ -59,6 +59,10 @@ dependencies {
 
 
     testImplementation 'junit:junit:4.12'
+
+    def room_version = "1.1.0"
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    kapt "android.arch.persistence.room:compiler:$room_version"
 }
 //Firebase
 apply plugin: 'com.google.gms.google-services'

@@ -22,18 +22,7 @@
             android:layout_height="750dp">
 
             <!-- Colocar cardview com as disciplinas-->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerAgendamentos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:cacheColorHint="@android:color/transparent"
-                android:clipToPadding="false"
-                android:divider="@null"
-                android:dividerHeight="0dp"
-                android:listSelector="@android:color/transparent"
-                android:scrollbarStyle="outsideOverlay"
-                android:background="#F6C01E"
-                android:scrollbars="vertical"/>
+
 
 
         </ScrollView>
