@@ -78,7 +78,7 @@ class  TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedLis
             }
 
             R.id.localizacao -> {
-                Toast.makeText(this, "Clicou em Modificados", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Clicou em Localização", Toast.LENGTH_SHORT).show()
                 var intent = Intent(this, MapasActivity::class.java)
                 startActivity(intent)
             }
