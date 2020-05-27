@@ -50,6 +50,6 @@ class AgendamentoAdapter (val agendamento: List<AgendamentoPai>, val onClick: (A
             holder.schedule.text = agendamentos.horario
             holder.formDate.text = agendamentos.data
 
-            holder.itemView.setOnClickListener{ onClick(AgendamentoPai())}
+            holder.itemView.setOnClickListener{ onClick(agendamentos)}
         }
 }

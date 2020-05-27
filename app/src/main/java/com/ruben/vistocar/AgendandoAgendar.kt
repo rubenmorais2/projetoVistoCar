@@ -1,33 +1,39 @@
 package com.ruben.vistocar
 
 import android.content.Context
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.recyclerview.widget.DefaultItemAnimator
-import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.layout_meus_agendamentos.*
-import kotlinx.android.synthetic.main.meus_agendamentos.*
+import kotlinx.android.synthetic.main.agenda_agendamentos.*
 import kotlinx.android.synthetic.main.toolbar.*
 
 class AgendandoAgendar: AppCompatActivity() {
 
     private val context: Context get() = this
     var agendamento: AgendamentoPai? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.layout_meus_agendamentos)
-        setTitle("Agendamentos")
+        setContentView(R.layout.agenda_agendamentos)
+
+
+        if (intent.getSerializableExtra("agendamento") is AgendamentoPai)
+            agendamento = intent.getSerializableExtra("agendamento") as AgendamentoPai
+
 
         setSupportActionBar(toolbar)
 
+
+        // up navigation
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        //para atualizar dados
+        carro.text = agendamento?.modelo
+        model.text = agendamento?.marca
+        typeService.text = agendamento?.tipoServico
+        time.text = agendamento?.horario
+        date.text = agendamento?.data
 
     }
 
@@ -44,10 +50,12 @@ class AgendandoAgendar: AppCompatActivity() {
             AlertDialog.Builder(this)
                 .setTitle(R.string.app_name)
                 .setMessage("Deseja excluir o agendamento?")
-                .setPositiveButton("Sim") { dialog, which ->
+                .setPositiveButton("Sim") {
+                    dialog, which ->
                     dialog.dismiss()
                     taskExcluir()
-                }.setNegativeButton("Não") { dialog, which ->
+                }.setNegativeButton("Não") {
+                    dialog, which ->
                     dialog.dismiss()
                 }.create().show()
         } else if (id == android.R.id.home) {

@@ -54,6 +54,7 @@ class MeusAgendamentos : AppCompatActivity() {
     fun onClickAgendamentos(agendamento: AgendamentoPai) {
         Toast.makeText(context, "Clicou Agendamento ${agendamento.tipoServico}", Toast.LENGTH_SHORT).show()
         val intent = Intent(context, AgendandoAgendar::class.java)
+        intent.putExtra("agendamento", agendamento)
         startActivityForResult(intent, REQUEST_REMOVE)
     }
 
