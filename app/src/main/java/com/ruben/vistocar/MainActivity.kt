@@ -29,7 +29,7 @@ class MainActivity : DebugActivity() {
 
         button.setOnClickListener {
             onClickLogin()
-            var intent = Intent(this, TelaInicial::class.java)
+            var intent = Intent(this, SplashScreen::class.java)
             val nomeUsuario = acessar.text.toString()
             val senhaUsuario = senha.text.toString()
 

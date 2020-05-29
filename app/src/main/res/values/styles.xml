@@ -14,5 +14,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar"></style>
+
 
 </resources>
