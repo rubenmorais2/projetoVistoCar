@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.ruben.vistocar">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -12,6 +13,7 @@
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" />
+
 
     <application
         android:name=".VistoCarApplication"

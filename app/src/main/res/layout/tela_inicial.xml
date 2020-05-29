@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,25 +10,207 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-    <!--Conteúdo da tela-->
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:context=".TelaInicial">
-
-        <include layout="@layout/toolbar" />
-
-        <ScrollView
+        android:layout_height="600dp"
+        android:backgroundTint="#FF0202">
+        <!--Conteúdo da tela-->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="750dp">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".TelaInicial">
 
-            <!-- Colocar cardview com as disciplinas-->
+            <include layout="@layout/toolbar" />
+
+            <TextView
+                android:layout_width="370dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/facilitar"
+                android:textAlignment="center"
+                android:textColor="#000070"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="370dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/links"
+                android:textAlignment="center"
+                android:textColor="#F6C01E"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="390dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="2dp"
+                android:textColor="#FFFF0202"
+                android:text="@string/clicar"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/portaria"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/portaria" />
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/portariasDenatran"
+                android:textAlignment="center"
+                android:textColor="#000070"
+                android:textSize="16sp" />
 
 
+            <ImageView
+                android:id="@+id/resolucao"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="270dp"
+                android:layout_marginTop="-131dp"
+                android:background="@drawable/resolucao" />
 
-        </ScrollView>
-    </LinearLayout>
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="210dp"
+                android:text="@string/resolucao"
+                android:textAlignment="center"
+                android:textColor="#000070"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/abnt"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/abnt"/>
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/abnt"
+                android:textAlignment="center"
+                android:textColor="#000070"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/der"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="270dp"
+                android:layout_marginTop="-131dp"
+                android:background="@drawable/abnt" />
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="210dp"
+                android:text="@string/der"
+                android:textAlignment="center"
+                android:textColor="#000070"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/denatran"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/denatran"/>
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/denatran"
+                android:textAlignment="center"
+                android:textColor="#000070"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/detranSP"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="270dp"
+                android:layout_marginTop="-141dp"
+                android:background="@drawable/resolucao" />
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="210dp"
+                android:text="@string/detran"
+                android:textAlignment="center"
+                android:textColor="#000070"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/inmetro"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/inmetro"/>
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/inmetro"
+                android:textAlignment="center"
+                android:textColor="#000070"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/ibama"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="270dp"
+                android:layout_marginTop="-141dp"
+                android:background="@drawable/ibama" />
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="210dp"
+                android:text="@string/ibama"
+                android:textAlignment="center"
+                android:textColor="#000070"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/angis"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/angis"/>
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/angis"
+                android:textAlignment="center"
+                android:textColor="#000070"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+    </ScrollView>
 
     <!--Menu lateral-->
     <com.google.android.material.navigation.NavigationView

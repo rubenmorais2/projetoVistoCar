@@ -57,7 +57,18 @@
         e retornar sem nenhum custo adicional.</string>
     <string name="seguida">"O que fazer em seguida?" Encaminhar o CSV, em conjunto com formulário e comprovantes de recolhimento de taxas de alteração de dados e vistoria, ao Detran, que por sua vez emitirá novos documentos para fins de regularização do veículo.</string>
     <string name="API_KEY">AIzaSyAy_9-DT87uQQ3fWwNDiQkRdHMLDJ0iG24</string>
+    <string name="facilitar">LINKS PARA FACILITAR SEU TRABALHO</string>
+    <string name="links">Quer dicas e sugestões sobre links de como providenciar os documentos? Então dê uma olhada em alguns links que separamos e descubra aqui como estar sempre com suas documentações em dia!</string>
+    <string name="portariasDenatran">Portarias Denatran Departamento Nacional de Trânsito</string>
+    <string name="resolucao">Resoluções - Contran Departamento Nacional de Transito</string>
+    <string name="clicar">Apenas clique na imagem do link desejado</string>
+    <string name="abnt">ABNT Associação Brasileira de Normas Técnica</string>
+    <string name="der">D.E.R. Departamento de Estrada de Rodagem Secretaria de Logística e Transporte</string>
+    <string name="denatran">Denatran Departamento Nacional de Transito Deliberações - Contran</string>
+    <string name="detran">Detran SP Departamento Estadual de Trânsito de São Paulo Secretaria de Planejamento e Gestão</string>
+    <string name="inmetro">INMETRO Instituto Nacional de Metrologia, Qualidade e Tecnologia</string>
+    <string name="ibama">Ibama Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis.</string>
+    <string name="angis">ANGIS Associação Nacional dos Organismos de Inspeção e Segurança Veicular</string>
+    <string name="fingerprint">Usar digital para logar</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -8,12 +8,14 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.agendamento.*
 import kotlinx.android.synthetic.main.toolbar.*
 
+
 class CriarAgendamento : DebugActivity() {
 
     private val context: Context get() = this
     private var agendamento = listOf<AgendamentoPai>()
     private var REQUEST_CADASTRO = 1
     private var REQUEST_REMOVE = 2
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +25,8 @@ class CriarAgendamento : DebugActivity() {
 
         supportActionBar?.title = "Agendamento"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+
 
         salvarAgendamento.setOnClickListener {
             val agendamento = AgendamentoPai()

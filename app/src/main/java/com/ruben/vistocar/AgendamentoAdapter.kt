@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import org.w3c.dom.Text
 
 class AgendamentoAdapter (val agendamento: List<AgendamentoPai>, val onClick: (AgendamentoPai) ->Unit
 ): RecyclerView.Adapter<AgendamentoAdapter.AgendamentoViewHolder>() {
@@ -18,6 +19,8 @@ class AgendamentoAdapter (val agendamento: List<AgendamentoPai>, val onClick: (A
         val schedule: TextView
         val formDate: TextView
         val meus_agendamentos: CardView
+
+
 
         init {
             car = view.findViewById(R.id.carro)
