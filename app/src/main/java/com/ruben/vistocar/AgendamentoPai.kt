@@ -10,6 +10,7 @@ class AgendamentoPai : Serializable {
 
     @PrimaryKey
     var id: Long = 0
+    var edittext: String = ""
     var marca: String = ""
     var modelo: String = ""
     var tipoServico: String = ""
@@ -18,7 +19,7 @@ class AgendamentoPai : Serializable {
 
 
     override fun toString(): String {
-        return "Agendamento(nome'$tipoServico')"
+        return "Agendamento(nome'$edittext')"
     }
     fun toJson(): String {
         return GsonBuilder().create().toJson(this)

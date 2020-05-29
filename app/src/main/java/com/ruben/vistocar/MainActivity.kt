@@ -2,6 +2,7 @@ package com.ruben.vistocar
 
 import android.content.Context
 import android.content.Intent
+import android.hardware.biometrics.BiometricPrompt
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -9,9 +10,11 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.login.*
 import kotlinx.android.synthetic.main.menu_lateral_tela_inicial.*
+import java.util.concurrent.Executor
 
 class MainActivity : DebugActivity() {
 
@@ -19,7 +22,6 @@ class MainActivity : DebugActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
-
 
         supportActionBar?.title = ""
 
@@ -36,6 +38,8 @@ class MainActivity : DebugActivity() {
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "Úsuario ou Senha Incorreto", Toast.LENGTH_SHORT).show()
+
+
             }
         }
 
@@ -49,22 +53,20 @@ class MainActivity : DebugActivity() {
         }
     }
 
-    fun onClickLogin(){
+    fun onClickLogin() {
 
-            val valorUsuario = acessar.text.toString()
-            val valorSenha = senha.text.toString()
+        val valorUsuario = acessar.text.toString()
+        val valorSenha = senha.text.toString()
 
-            // armazenar valor do checkbox
-            Prefs.setBoolean("lembrar", checkBox.isChecked)
-            // verificar se é para pembrar nome e senha
-            if (checkBox.isChecked) {
-                Prefs.setString("lembrarNome", valorUsuario)
-                Prefs.setString("lembrarSenha", valorSenha)
-            } else{
-                Prefs.setString("lembrarNome", "")
-                Prefs.setString("lembrarSenha", "")
-            }
+        // armazenar valor do checkbox
+        Prefs.setBoolean("lembrar", checkBox.isChecked)
+        // verificar se é para pembrar nome e senha
+        if (checkBox.isChecked) {
+            Prefs.setString("lembrarNome", valorUsuario)
+            Prefs.setString("lembrarSenha", valorSenha)
+        } else {
+            Prefs.setString("lembrarNome", "")
+            Prefs.setString("lembrarSenha", "")
         }
-
-
     }
+}

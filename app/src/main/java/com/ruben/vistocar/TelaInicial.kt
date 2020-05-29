@@ -1,17 +1,14 @@
 package com.ruben.vistocar
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
-import androidx.recyclerview.widget.DefaultItemAnimator
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.servicos.*
 import kotlinx.android.synthetic.main.tela_inicial.*
 import kotlinx.android.synthetic.main.toolbar.*
 
@@ -28,6 +25,70 @@ class  TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedLis
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         configuraMenuLateral()
+
+        portaria.setOnClickListener {
+            val url = "https://infraestrutura.gov.br/denatran"
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
+            startActivity(i)
+        }
+
+        resolucao.setOnClickListener {
+            val url = "https://infraestrutura.gov.br/denatran"
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
+            startActivity(i)
+        }
+
+        abnt.setOnClickListener {
+            val url = "https://www.abnt.org.br/"
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
+            startActivity(i)
+        }
+
+        der.setOnClickListener {
+            val url = "http://www.der.sp.gov.br/WebSite/Index.aspx"
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
+            startActivity(i)
+        }
+
+        denatran.setOnClickListener {
+            val url = "https://infraestrutura.gov.br/denatran"
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
+            startActivity(i)
+        }
+
+        detranSP.setOnClickListener {
+            val url = "http://www.detran.sp.gov.br/wps/portal/portaldetran/cidadao/homeOLD/!ut/p/z1/jZFLc4JAEIR_iweuuw2LuOS2ENRA3haR7CUFSnArvAo2piq_XuPRKDq3qeqve6aaSppQWadbVaRaNXVa7vd36XwwGwvXMwU4vAAicjwG_9HEDHR5EODMCFB5DT8gkMP2x3zwNoXgr2xqBk8Woivzwxf48zm37mfmrQ_h2vbDXRgxuOwyL48k_y84CIYiLj0ZUqmyivysKgLC3cnEYiYbuw4fW7D_OhJ1xnhBZZd_5l3eke9uX91G6_bGgIGt6jVp179rVSidlmTVVCTrDJSq_uoNnDLYNL2myWmQtlUcxwnUc7XkvRiNdt8pJZg!/dz/d5/L2dBISEvZ0FBIS9nQSEh/"
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
+            startActivity(i)
+        }
+
+        inmetro.setOnClickListener {
+            val url = "https://www4.inmetro.gov.br/"
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
+            startActivity(i)
+        }
+
+        ibama.setOnClickListener {
+            val url = "http://www.ibama.gov.br/"
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
+            startActivity(i)
+        }
+
+        angis.setOnClickListener {
+            val url = "http://angis.org.br/"
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
+            startActivity(i)
+        }
+
 
 
     }
