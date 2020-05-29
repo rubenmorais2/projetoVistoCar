@@ -70,5 +70,6 @@
     <string name="ibama">Ibama Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis.</string>
     <string name="angis">ANGIS Associação Nacional dos Organismos de Inspeção e Segurança Veicular</string>
     <string name="fingerprint">Usar digital para logar</string>
+    <string name="carregando">Aguarde, estamos processando as informações...</string>
 
 </resources>
