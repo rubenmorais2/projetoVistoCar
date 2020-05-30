@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:id="@+id/inspecaoQ"
     android:layout_height="match_parent"
-    tools:context=".InspecaoQualidade"
+    tools:context="Servicos.InspecaoQualidade"
     android:orientation="vertical">
 
     <include layout="@layout/toolbar"/>

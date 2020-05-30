@@ -2,19 +2,15 @@ package com.ruben.vistocar
 
 import android.content.Context
 import android.content.Intent
-import android.hardware.biometrics.BiometricPrompt
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
-import android.widget.Button
-import android.widget.EditText
+import android.text.Editable
 import android.widget.Toast
-import androidx.core.content.ContextCompat
-import kotlinx.android.synthetic.*
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.login.*
-import kotlinx.android.synthetic.main.menu_lateral_tela_inicial.*
-import java.util.concurrent.Executor
+
+enum class ProviderType {
+    BASIC
+}
 
 class MainActivity : DebugActivity() {
 
@@ -27,8 +23,32 @@ class MainActivity : DebugActivity() {
 
         imageView2.setImageResource(R.drawable.logo)
 
+        //val bundle = intent.extras
+        //val email = bundle?.getString("email")
+        //val provider = bundle?.getString("provider")
+        //setup(email ?: "", provider ?: "")
+
+        novoCadastro.setOnClickListener {
+            intent = Intent(this, Cadastro::class.java)
+            startActivity(intent)
+        }
+
+
+    //fun String.toEditable(): Editable = Editable.Factory.getInstance().newEditable(this)
+    //private fun setup(email: String, provider: String) {
+
+        //acessar.text = email?.toEditable()
+        //senha.text = provider?.toEditable()
+
         button.setOnClickListener {
             onClickLogin()
+            //FirebaseAuth.getInstance().signOut()
+            //onBackPressed()
+
+
+
+
+
             var intent = Intent(this, SplashScreen::class.java)
             val nomeUsuario = acessar.text.toString()
             val senhaUsuario = senha.text.toString()
@@ -38,35 +58,36 @@ class MainActivity : DebugActivity() {
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "Úsuario ou Senha Incorreto", Toast.LENGTH_SHORT).show()
+            }
+
+            }
 
 
+
+            var lembrar = Prefs.getBoolean("lembrar")
+            if (lembrar) {
+                var lembrarNome = Prefs.getString("lembrarNome")
+                var lembrarSenha = Prefs.getString("lembrarSenha")
+                acessar.setText(lembrarNome)
+                senha.setText(lembrarSenha)
+                checkBox.isChecked = lembrar
             }
         }
 
-        var lembrar = Prefs.getBoolean("lembrar")
-        if (lembrar) {
-            var lembrarNome = Prefs.getString("lembrarNome")
-            var lembrarSenha = Prefs.getString("lembrarSenha")
-            acessar.setText(lembrarNome)
-            senha.setText(lembrarSenha)
-            checkBox.isChecked = lembrar
+        fun onClickLogin() {
+
+            val valorUsuario = acessar.text.toString()
+            val valorSenha = senha.text.toString()
+
+            //armazenar valor do checkbox
+            Prefs.setBoolean("lembrar", checkBox.isChecked)
+            //verificar se é para pembrar nome e senha
+            if (checkBox.isChecked) {
+                Prefs.setString("lembrarNome", valorUsuario)
+                Prefs.setString("lembrarSenha", valorSenha)
+            } else {
+                Prefs.setString("lembrarNome", "")
+                Prefs.setString("lembrarSenha", "")
+            }
         }
     }
-
-    fun onClickLogin() {
-
-        val valorUsuario = acessar.text.toString()
-        val valorSenha = senha.text.toString()
-
-        // armazenar valor do checkbox
-        Prefs.setBoolean("lembrar", checkBox.isChecked)
-        // verificar se é para pembrar nome e senha
-        if (checkBox.isChecked) {
-            Prefs.setString("lembrarNome", valorUsuario)
-            Prefs.setString("lembrarSenha", valorSenha)
-        } else {
-            Prefs.setString("lembrarNome", "")
-            Prefs.setString("lembrarSenha", "")
-        }
-    }
-}

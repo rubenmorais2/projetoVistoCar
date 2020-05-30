@@ -16,11 +16,16 @@
             android:id="@+id/fale_conosco"
             android:icon="@drawable/fale_conosco"
             android:title="Fale Conosco"/>
+
         <item
             android:id="@+id/grupo"
             android:icon="@drawable/ogrupo"
             android:title="O Grupo"/>
 
+        <item
+            android:id="@+id/links"
+            android:icon="@drawable/links"
+            android:title="Links Úteis"/>
         <item
             android:id="@+id/services"
             android:icon="@drawable/servicos"

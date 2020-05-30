@@ -5,8 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.agenda_agendamentos.*
+import kotlinx.android.synthetic.main.agendamento.*
 import kotlinx.android.synthetic.main.toolbar.*
 
 class AgendandoAgendar: AppCompatActivity() {
@@ -16,6 +20,27 @@ class AgendandoAgendar: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.agenda_agendamentos)
+
+        //val personNames = arrayOf("", "Palio", "Fiat", "Chevrolet", "Renaut", "Volkswagem", "Ford", "Toyota", "Hyundai")
+        //val arrayAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, personNames)
+
+        //marca.adapter = arrayAdapter
+
+        //marca.onItemSelectedListener = object :
+
+          //  AdapterView.OnItemSelectedListener {
+            //override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            //}
+
+            //override fun onItemSelected(
+              //  parent: AdapterView<*>?,
+                //view: View?,
+                //position: Int,
+                //id: Long
+            //) {
+            //}
+        //}
 
 
         if (intent.getSerializableExtra("agendamento") is AgendamentoPai)
