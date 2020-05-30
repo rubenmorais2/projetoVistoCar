@@ -1,5 +1,7 @@
 package com.ruben.vistocar
 
+import Servicos.FaleConosco
+import Servicos.LinksUteis
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
@@ -25,71 +27,6 @@ class  TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedLis
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         configuraMenuLateral()
-
-        portaria.setOnClickListener {
-            val url = "https://infraestrutura.gov.br/denatran"
-            val i = Intent(Intent.ACTION_VIEW)
-            i.data = Uri.parse(url)
-            startActivity(i)
-        }
-
-        resolucao.setOnClickListener {
-            val url = "https://infraestrutura.gov.br/denatran"
-            val i = Intent(Intent.ACTION_VIEW)
-            i.data = Uri.parse(url)
-            startActivity(i)
-        }
-
-        abnt.setOnClickListener {
-            val url = "https://www.abnt.org.br/"
-            val i = Intent(Intent.ACTION_VIEW)
-            i.data = Uri.parse(url)
-            startActivity(i)
-        }
-
-        der.setOnClickListener {
-            val url = "http://www.der.sp.gov.br/WebSite/Index.aspx"
-            val i = Intent(Intent.ACTION_VIEW)
-            i.data = Uri.parse(url)
-            startActivity(i)
-        }
-
-        denatran.setOnClickListener {
-            val url = "https://infraestrutura.gov.br/denatran"
-            val i = Intent(Intent.ACTION_VIEW)
-            i.data = Uri.parse(url)
-            startActivity(i)
-        }
-
-        detranSP.setOnClickListener {
-            val url = "http://www.detran.sp.gov.br/wps/portal/portaldetran/cidadao/homeOLD/!ut/p/z1/jZFLc4JAEIR_iweuuw2LuOS2ENRA3haR7CUFSnArvAo2piq_XuPRKDq3qeqve6aaSppQWadbVaRaNXVa7vd36XwwGwvXMwU4vAAicjwG_9HEDHR5EODMCFB5DT8gkMP2x3zwNoXgr2xqBk8Woivzwxf48zm37mfmrQ_h2vbDXRgxuOwyL48k_y84CIYiLj0ZUqmyivysKgLC3cnEYiYbuw4fW7D_OhJ1xnhBZZd_5l3eke9uX91G6_bGgIGt6jVp179rVSidlmTVVCTrDJSq_uoNnDLYNL2myWmQtlUcxwnUc7XkvRiNdt8pJZg!/dz/d5/L2dBISEvZ0FBIS9nQSEh/"
-            val i = Intent(Intent.ACTION_VIEW)
-            i.data = Uri.parse(url)
-            startActivity(i)
-        }
-
-        inmetro.setOnClickListener {
-            val url = "https://www4.inmetro.gov.br/"
-            val i = Intent(Intent.ACTION_VIEW)
-            i.data = Uri.parse(url)
-            startActivity(i)
-        }
-
-        ibama.setOnClickListener {
-            val url = "http://www.ibama.gov.br/"
-            val i = Intent(Intent.ACTION_VIEW)
-            i.data = Uri.parse(url)
-            startActivity(i)
-        }
-
-        angis.setOnClickListener {
-            val url = "http://angis.org.br/"
-            val i = Intent(Intent.ACTION_VIEW)
-            i.data = Uri.parse(url)
-            startActivity(i)
-        }
-
-
 
     }
 
@@ -127,11 +64,13 @@ class  TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedLis
                 var intent = Intent(this, Perfil ::class.java)
                 startActivity(intent)
             }
+
             R.id.fale_conosco -> {
                 Toast.makeText(this, "Clicou em Fale Conosco", Toast.LENGTH_SHORT).show()
                 var intent = Intent(this, FaleConosco::class.java)
                 startActivity(intent)
             }
+
             R.id.services -> {
                 Toast.makeText(this, "Clicou em Serviços", Toast.LENGTH_SHORT).show()
                 var intent = Intent(this, Servicos::class.java)
@@ -141,6 +80,12 @@ class  TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedLis
             R.id.localizacao -> {
                 Toast.makeText(this, "Clicou em Localização", Toast.LENGTH_SHORT).show()
                 var intent = Intent(this, MapasActivity::class.java)
+                startActivity(intent)
+            }
+
+            R.id.links -> {
+                Toast.makeText(this, "Clicou em Links", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, LinksUteis::class.java)
                 startActivity(intent)
             }
             R.id.nav_sair -> {

@@ -30,9 +30,16 @@
         <activity android:name=".ServicosPai" />
         <activity android:name=".DebugActivity" />
         <activity android:name=".Prefs" />
-        <activity android:name=".SplashScreen"
-            android:theme="@style/SplashScreen"
-            android:noHistory="true"/>
+        <activity
+            android:name=".SplashScreen"
+            android:noHistory="true"
+            android:theme="@style/SplashScreen" />
+        <activity
+            android:name=".Cadastro"
+            android:theme="@style/AppTheme.Toolbar"/>
+        <activity
+            android:name="Servicos.LinksUteis"
+            android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name=".MapasActivity"
             android:theme="@style/AppTheme.Toolbar" />
@@ -46,52 +53,52 @@
             android:name=".MeusAgendamentos"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
-            android:name=".ProcessoImportacao"
+            android:name="Servicos.ProcessoImportacao"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
-            android:name=".Caminhoes"
+            android:name="Servicos.Caminhoes"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
-            android:name=".Acessibilidade"
+            android:name="Servicos.Acessibilidade"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
-            android:name=".InsencaoIPVA"
+            android:name="Servicos.InsencaoIPVA"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
-            android:name=".InspecaoQualidade"
+            android:name="Servicos.InspecaoQualidade"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
-            android:name=".Homologacao"
+            android:name="Servicos.Homologacao"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
-            android:name=".Fretamento"
+            android:name="Servicos.Fretamento"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
-            android:name=".InspecaoSeguranca"
+            android:name="Servicos.InspecaoSeguranca"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
-            android:name=".InspecaoMercosul"
+            android:name="Servicos.InspecaoMercosul"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
-            android:name=".Alvaras"
+            android:name="Servicos.Alvaras"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
-            android:name=".Transporte"
+            android:name="Servicos.Transporte"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
-            android:name=".Gas"
+            android:name="Servicos.Gas"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
-            android:name=".Modificados"
+            android:name="Servicos.Modificados"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
-            android:name=".Recuperados"
+            android:name="Servicos.Recuperados"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
-            android:name=".FaleConosco"
+            android:name="Servicos.FaleConosco"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
-            android:name=".SobreNos"
+            android:name="Servicos.SobreNos"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name=".Perfil"

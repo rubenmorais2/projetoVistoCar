@@ -36,7 +36,7 @@
         android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:hint="@string/digite_seu_usuario"
-        android:inputType="textWebEmailAddress|textEmailAddress"
+        android:inputType="textEmailAddress"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.437"
@@ -66,12 +66,12 @@
         tools:ignore="MissingConstraints,MissingPrefix" />
 
     <TextView
-        android:id="@+id/TextView"
+        android:id="@+id/novoCadastro"
         android:layout_width="145dp"
         android:layout_height="20dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="132dp"
         android:layout_marginBottom="250dp"
-        android:text="@string/esqueci_minha_senha"
+        android:text="@string/novo_cadastro"
         android:textColor="#000070"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -30,25 +30,17 @@ class CriarAgendamento : DebugActivity() {
 
         salvarAgendamento.setOnClickListener {
             val agendamento = AgendamentoPai()
-            //if (modelo.getText().length == 0)
-            //if (marca.getText().length == 0)
-            //if (tipoServico.getText().length == 0)
-            //if (horario.getText().length == 0)
-            //if (data.getText().length == 0){
-            //modelo.setError("Campo vazio")
-            //marca.setError("Campo vazio")
-            //tipoServico.setError("Campo vazio")
-            //horario.setError("Campo vazio")
+
             //data.setError("Campo vazio")
-            //TextUtils.isEmpty(modelo.marca.tipoServico.horario.data.getText().toString().trim());modelo.setError("Campo vazio")
             agendamento.modelo = modelo.text.toString()
             agendamento.marca = marca.text.toString()
             agendamento.tipoServico = tipoServico.text.toString()
             agendamento.horario = horario.text.toString()
             agendamento.data = data.text.toString()
+            //if (modelo.text.isNotEmpty() && marca.text.isNotEmpty() && tipoServico.text.isNotEmpty() && horario.text.isNotEmpty() && data.text.isNotEmpty())  {
+                taskAgendamentos(agendamento)
+            //}
 
-
-            taskAgendamentos(agendamento)
         }
 
     }
