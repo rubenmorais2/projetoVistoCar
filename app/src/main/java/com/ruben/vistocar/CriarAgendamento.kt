@@ -37,9 +37,12 @@ class CriarAgendamento : DebugActivity() {
             agendamento.tipoServico = tipoServico.text.toString()
             agendamento.horario = horario.text.toString()
             agendamento.data = data.text.toString()
-            //if (modelo.text.isNotEmpty() && marca.text.isNotEmpty() && tipoServico.text.isNotEmpty() && horario.text.isNotEmpty() && data.text.isNotEmpty())  {
+            agendamento.placa = Placas.text.toString()
+            if (modelo.text.isNotEmpty() && marca.text.isNotEmpty() && tipoServico.text.isNotEmpty() && horario.text.isNotEmpty() && data.text.isNotEmpty() && Placas.text.isNotEmpty()) {
                 taskAgendamentos(agendamento)
-            //}
+            } else {
+                Toast.makeText(this, "Todos os campos devem ser preenchidos", Toast.LENGTH_SHORT).show()
+            }
 
         }
 

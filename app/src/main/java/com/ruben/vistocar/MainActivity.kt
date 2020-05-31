@@ -4,15 +4,31 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
-import android.widget.Toast
+import android.text.TextUtils
+import android.util.Log
+import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.login.*
-
-enum class ProviderType {
-    BASIC
-}
+import org.w3c.dom.Text
 
 class MainActivity : DebugActivity() {
+
+    private val TAG = "MainActivity"
+
+    //variaveis globais
+    private var Email: String? = null
+    private var Senha: String? = null
+
+    //Elementos da interface UI
+    private var etEmail: EditText? = null
+    private var etSenha: EditText? = null
+    private var btnButton: Button? = null
+    private var cadastro: TextView? = null
+    private var tvEsqueciaSenha: TextView? = null
+    private var btcheckBox: CheckBox? = null
+
+    //referencias ao banco de dados
+    private var mAuth: FirebaseAuth? = null
 
     private val context: Context get() = this
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,45 +38,12 @@ class MainActivity : DebugActivity() {
         supportActionBar?.title = ""
 
         imageView2.setImageResource(R.drawable.logo)
-
-        //val bundle = intent.extras
-        //val email = bundle?.getString("email")
-        //val provider = bundle?.getString("provider")
-        //setup(email ?: "", provider ?: "")
+        initialize()
 
         novoCadastro.setOnClickListener {
             intent = Intent(this, Cadastro::class.java)
             startActivity(intent)
         }
-
-
-    //fun String.toEditable(): Editable = Editable.Factory.getInstance().newEditable(this)
-    //private fun setup(email: String, provider: String) {
-
-        //acessar.text = email?.toEditable()
-        //senha.text = provider?.toEditable()
-
-        button.setOnClickListener {
-            onClickLogin()
-            //FirebaseAuth.getInstance().signOut()
-            //onBackPressed()
-
-
-
-
-
-            var intent = Intent(this, SplashScreen::class.java)
-            val nomeUsuario = acessar.text.toString()
-            val senhaUsuario = senha.text.toString()
-
-            if (nomeUsuario == "aluno" && senhaUsuario == "impacta") {
-                Toast.makeText(this, "Bem vindo $nomeUsuario", Toast.LENGTH_SHORT).show()
-                startActivity(intent)
-            } else {
-                Toast.makeText(this, "Úsuario ou Senha Incorreto", Toast.LENGTH_SHORT).show()
-            }
-
-            }
 
 
 
@@ -72,6 +55,56 @@ class MainActivity : DebugActivity() {
                 senha.setText(lembrarSenha)
                 checkBox.isChecked = lembrar
             }
+        }
+
+        private fun initialize() {
+            onClickLogin()
+            tvEsqueciaSenha = findViewById(R.id.Esqueci) as TextView
+            btcheckBox = findViewById(R.id.checkBox) as CheckBox
+            cadastro = findViewById(R.id.novoCadastro) as TextView
+            etEmail = findViewById(R.id.acessar) as EditText
+            etSenha = findViewById(R.id.senha) as EditText
+            btnButton = findViewById(R.id.button) as Button
+
+            mAuth = FirebaseAuth.getInstance()
+
+            tvEsqueciaSenha!!
+                .setOnClickListener{startActivity(Intent(this@MainActivity, EsqueciaSenha::class.java))}
+
+            cadastro!!
+                .setOnClickListener {startActivity(Intent(this@MainActivity, Cadastro::class.java))}
+
+            btnButton!!.setOnClickListener{loginUser()}
+
+
+        }
+
+        private fun loginUser() {
+            Email = etEmail?.text.toString()
+            Senha = etSenha?.text.toString()
+
+            if (!TextUtils.isEmpty(Email) && !TextUtils.isEmpty(Senha)){
+                Log.d(TAG, "User Login")
+
+                mAuth!!.signInWithEmailAndPassword(Email!!, Senha!!).addOnCompleteListener(this){
+                    task->
+
+                    //Autenticando usuario, atualizando informações de Ui c/ login
+                    if (task.isSuccessful) {
+                        Log.d(TAG, "Logado com Sucesso")
+                        updateUi()
+                    } else {
+                        Log.d(TAG, "Erro ao logar", task.exception)
+                        Toast.makeText(this@MainActivity, "Não existe nenhum usuário com este email.", Toast.LENGTH_LONG).show()
+                    }
+                }
+            }
+        }
+
+        private fun updateUi() {
+            val intent = Intent(this@MainActivity, SplashScreen::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
         }
 
         fun onClickLogin() {

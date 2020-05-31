@@ -21,27 +21,6 @@ class AgendandoAgendar: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.agenda_agendamentos)
 
-        //val personNames = arrayOf("", "Palio", "Fiat", "Chevrolet", "Renaut", "Volkswagem", "Ford", "Toyota", "Hyundai")
-        //val arrayAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, personNames)
-
-        //marca.adapter = arrayAdapter
-
-        //marca.onItemSelectedListener = object :
-
-          //  AdapterView.OnItemSelectedListener {
-            //override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            //}
-
-            //override fun onItemSelected(
-              //  parent: AdapterView<*>?,
-                //view: View?,
-                //position: Int,
-                //id: Long
-            //) {
-            //}
-        //}
-
 
         if (intent.getSerializableExtra("agendamento") is AgendamentoPai)
             agendamento = intent.getSerializableExtra("agendamento") as AgendamentoPai

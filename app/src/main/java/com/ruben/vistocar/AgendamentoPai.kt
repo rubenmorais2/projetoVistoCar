@@ -16,7 +16,10 @@ class AgendamentoPai : Serializable {
     var tipoServico: String = ""
     var horario: String = ""
     var data: String = ""
-
+    var placa: String = ""
+    var nome: String = ""
+    var sobrenome: String = ""
+    var email: String = ""
 
     override fun toString(): String {
         return "Agendamento(nome'$edittext')"

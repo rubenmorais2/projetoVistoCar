@@ -18,6 +18,7 @@ class AgendamentoAdapter (val agendamento: List<AgendamentoPai>, val onClick: (A
         val kindService: TextView
         val schedule: TextView
         val formDate: TextView
+        val placa: TextView
         val meus_agendamentos: CardView
 
 
@@ -28,6 +29,7 @@ class AgendamentoAdapter (val agendamento: List<AgendamentoPai>, val onClick: (A
             kindService = view.findViewById(R.id.typeService)
             schedule = view.findViewById(R.id.time)
             formDate = view.findViewById(R.id.date)
+            placa = view.findViewById(R.id.placa)
             meus_agendamentos = view.findViewById(R.id.MyAgendamentos)
 
         }
@@ -52,6 +54,7 @@ class AgendamentoAdapter (val agendamento: List<AgendamentoPai>, val onClick: (A
             holder.kindService.text = agendamentos.tipoServico
             holder.schedule.text = agendamentos.horario
             holder.formDate.text = agendamentos.data
+            holder.placa.text = agendamentos.placa
 
             holder.itemView.setOnClickListener{ onClick(agendamentos)}
         }
