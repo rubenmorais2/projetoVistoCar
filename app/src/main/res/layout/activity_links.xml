@@ -205,7 +205,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="270dp"
-                android:layout_marginTop="-151dp"
+                android:layout_marginTop="-161dp"
                 android:background="@drawable/ibama" />
 
             <TextView

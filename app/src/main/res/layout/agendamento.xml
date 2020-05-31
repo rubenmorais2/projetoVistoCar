@@ -34,6 +34,17 @@
         android:inputType="textMultiLine" />
 
     <EditText
+        android:id="@+id/Placas"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/form_sedan"
+        android:textAlignment="center"
+        android:ems="10"
+        android:hint="Placa do Carro"
+        android:inputType="textMultiLine" />
+
+    <EditText
         android:id="@+id/tipoServico"
         android:layout_width="370dp"
         android:layout_height="50dp"

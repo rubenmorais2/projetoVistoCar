@@ -19,7 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_vistocar_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".menu_lateral_tela"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,8 +35,11 @@
             android:noHistory="true"
             android:theme="@style/SplashScreen" />
         <activity
+            android:name=".EsqueciaSenha"
+            android:theme="@style/AppTheme.Toolbar" />
+        <activity
             android:name=".Cadastro"
-            android:theme="@style/AppTheme.Toolbar"/>
+            android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name="Servicos.LinksUteis"
             android:theme="@style/AppTheme.Toolbar" />

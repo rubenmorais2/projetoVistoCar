@@ -15,7 +15,7 @@
     <string name="agendamento">Agendamento</string>
     <string name="configuracao">Configuração</string>
     <string name="sair">Sair</string>
-    <string name="novo_cadastro">Novo Cadastro</string>
+    <string name="novo_cadastro">Novo por aqui?</string>
     <string name="lembrar_senha">Lembrar senha</string>
     <string name="email_invalido">Digite um e-mail cadastrado em nosso sistema.</string>
     <string name="senha_invalida">Senha invalida</string>
@@ -78,7 +78,7 @@
     <string name="sobrenome">Sobrenome</string>
     <string name="nome">Nome</string>
     <string name="cadastrar">Cadastrar</string>
-    <string name="j_cadastrado">Já é cadastrado?</string>
     <string name="acessar">Acessar</string>
+    <string name="esqueceu_a_senha">Esqueceu a senha?</string>
 
 </resources>

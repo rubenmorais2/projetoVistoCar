@@ -14,7 +14,7 @@
 
         <LinearLayout
             android:layout_width="380dp"
-            android:layout_height="150dp"
+            android:layout_height="160dp"
             android:id="@+id/linear"
             android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"
@@ -33,6 +33,16 @@
 
             <TextView
                 android:id="@+id/model"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:text="20dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#F6C01E"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/placa"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="110dp"
@@ -74,7 +84,7 @@
             <ImageView
                 android:id="@+id/imagem"
                 android:layout_width="120dp"
-                android:layout_marginTop="-120dp"
+                android:layout_marginTop="-140dp"
                 android:layout_height="120dp"
                 android:layout_marginStart="240dp"
                 android:background="@drawable/visto"
@@ -103,11 +113,22 @@
         android:textSize="15sp"/>
 
     <TextView
+        android:id="@+id/Placas"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="80dp"
+        android:textAlignment="center"
+        android:text="Placa:"
+        android:textColor="#000070"
+        android:textSize="15sp"/>
+
+    <TextView
         android:id="@+id/tpServico"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="105dp"
         android:textAlignment="center"
         android:text="Tipo Serviço:"
         android:textColor="#000070"
@@ -118,7 +139,7 @@
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="105dp"
+        android:layout_marginTop="130dp"
         android:textAlignment="center"
         android:text="Horário:"
         android:textColor="#000070"
@@ -129,7 +150,7 @@
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="155dp"
         android:textAlignment="center"
         android:text="Data:"
         android:textColor="#000070"

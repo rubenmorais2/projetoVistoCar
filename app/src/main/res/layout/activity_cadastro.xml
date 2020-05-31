@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:id="@+id/cadastrar">
 
@@ -25,16 +26,18 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
         android:backgroundTint="#000070"
-        android:hint="@string/nome" />
+        android:hint="@string/nome"
+        android:inputType="textShortMessage" />
 
     <EditText
         android:id="@+id/sobrenome"
         android:layout_width="160dp"
         android:layout_height="50dp"
-        android:layout_marginTop="-50dp"
         android:layout_marginStart="220dp"
+        android:layout_marginTop="-50dp"
         android:backgroundTint="#000070"
-        android:hint="@string/sobrenome"/>
+        android:hint="@string/sobrenome"
+        android:inputType="textShortMessage" />
 
     <EditText
         android:id="@+id/Email"
@@ -47,16 +50,6 @@
         android:ems="10"
         android:inputType="textEmailAddress" />
 
-    <EditText
-        android:id="@+id/confirmEmail"
-        android:layout_width="360dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
-        android:backgroundTint="#000070"
-        android:hint="@string/confirme_seu_e_mail"
-        android:ems="10"
-        android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/Senha"
@@ -68,15 +61,7 @@
         android:inputType="textPassword"
         android:hint="@string/senha"/>
 
-    <EditText
-        android:id="@+id/confirmSenha"
-        android:layout_width="160dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="-50dp"
-        android:layout_marginStart="220dp"
-        android:backgroundTint="#000070"
-        android:inputType="textPassword"
-        android:hint="@string/confirme_a_senha"/>
+
 
     <Button
         android:id="@+id/Cadastrar"
@@ -88,25 +73,17 @@
         android:textSize="25dp"
         android:text="@string/cadastrar" />
 
-    <TextView
-        android:layout_width="360dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:textAlignment="center"
-        android:textSize="25dp"
-        android:textColor="#F6C01E"
-        android:text="Já estou cadastrado!"/>
+    <ProgressBar
+        android:id="@+id/Progress"
+        style="@android:style/Widget.ProgressBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        android:layout_marginTop="50dp"
+        tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/AcessarCadastro"
-        android:layout_width="370dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/form_hact"
-        android:textSize="25dp"
-        android:text="@string/acessar" />
+
 
 
 </LinearLayout>
