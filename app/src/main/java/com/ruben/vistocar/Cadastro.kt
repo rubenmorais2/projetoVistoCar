@@ -18,6 +18,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_cadastro.*
 import kotlinx.android.synthetic.main.login.*
+import kotlinx.android.synthetic.main.menu_lateral_tela_inicial.*
 import kotlinx.android.synthetic.main.toolbar.*
 
 class Cadastro : AppCompatActivity() {
@@ -72,8 +73,9 @@ class Cadastro : AppCompatActivity() {
         btCadastrar!!.setOnClickListener {creatNewAccount()
 
         }
+    }
 
-        }
+
 
 
     private fun creatNewAccount() {
