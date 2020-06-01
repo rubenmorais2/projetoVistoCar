@@ -19,7 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_vistocar_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Grid"></activity>
+
         <activity
             android:name=".MainActivity"
             android:theme="@style/SplashScreen">
@@ -29,7 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ServicosPai" />
+
         <activity android:name=".DebugActivity" />
         <activity android:name=".Prefs" />
         <activity
@@ -41,9 +41,6 @@
             android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name=".Cadastro"
-            android:theme="@style/AppTheme.Toolbar" />
-        <activity
-            android:name=".LinksUteis"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name=".MapasActivity"
@@ -104,9 +101,6 @@
             android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name=".SobreNos"
-            android:theme="@style/AppTheme.Toolbar" />
-        <activity
-            android:name=".Perfil"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name=".CriarAgendamento"

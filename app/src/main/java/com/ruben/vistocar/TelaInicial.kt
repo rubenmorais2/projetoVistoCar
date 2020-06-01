@@ -196,6 +196,12 @@ class  TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedLis
                 startActivity(intent)
             }
 
+            R.id.grupo -> {
+                Toast.makeText(this, "Clicou em o Grupo", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, SobreNos::class.java)
+                startActivity(intent)
+            }
+
             R.id.localizacao -> {
                 Toast.makeText(this, "Clicou em Localização", Toast.LENGTH_SHORT).show()
                 var intent = Intent(this, MapasActivity::class.java)

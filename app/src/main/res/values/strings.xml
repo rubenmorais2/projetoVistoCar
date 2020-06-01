@@ -10,12 +10,10 @@
     <string name="digite_sua_senha">Digite sua senha</string>
     <string name="digite_seu_usuario">E-Mail</string>
     <string name="title_activity_meu_lateral">meu_lateral</string>
-    <string name="textview">TextView</string>
-    <string name="perfil">Perfil</string>
     <string name="agendamento">Agendamento</string>
     <string name="configuracao">Configuração</string>
     <string name="sair">Sair</string>
-    <string name="novo_cadastro">Novo por aqui?</string>
+    <string name="novo_cadastro">Cadastre-se aqui!</string>
     <string name="lembrar_senha">Lembrar senha</string>
     <string name="email_invalido">Digite um e-mail cadastrado em nosso sistema.</string>
     <string name="senha_invalida">Senha invalida</string>
@@ -107,5 +105,51 @@
     <string name="coleta2">Inspeção dos itens de segurança e verificação do atendimento à legislação municipal vigente de caminhões empregados na coleta e transporte de entulhos que operam no municipio de São Paulo e outras regiões.</string>
     <string name="importacao">PROCESSO DE IMPORTAÇÃO DE VEÍCULO</string>
     <string name="importacao2">O Conselho Nacional de Trânsito (Contran) exige que a empresa que fabrica ou transforma veículos, com produção em série ou não, deve passar por avaliações tanto do órgão estadual como do Instituto Nacional de Metodologia.</string>
+    <string name="referencia">REFERÊNCIA NA CAPACITAÇÃO, CERTIFICAÇÃO E INSPEÇÃO VEICULAR.</string>
+    <string name="referencia2">Um veículo equipado com diversos itens de segurança requer, periodicamente, passar por inspeção e manutenção preventiva, procedimentos que garantem o bem estar do automóvel, do motorista e do meio ambiente. Requer, principalmente, de um serviço realizado por profissionais qualificados e experientes, princípios que tornam o Grupo Visto Car referência no assunto.</string>
+    <string name="missao">Missão</string>
+    <string name="visao">Visão</string>
+    <string name="valores">Valores</string>
+    <string name="historia">NOSSA HISTÓRIA</string>
+    <string name="historia2">O Grupo Visto-Car tem história, pois iniciou suas atividades no Ano 2000 (Unidade Jaçanã -SP) e a dedicação estratégica à satisfação do Cliente e ao cumprimento dos requisitos de qualidade vigentes resultaram em um sucesso empresarial que tornou possível a expansão do nosso negócio. Tem história, pois é objeto da constituição de varias empresas (bases de inspeção) denominadas Organismos de Inspeção de Segurança Veicular</string>
+    <string name="historia3">acreditados pela CGCRE-INMETRO como OIA-SV (Segurança Veicular), OIA - PP e OIVA (Produtos Perigosos) e licenciados pelo DENATRAN como I.T.L - Instituição Técnica Licenciada.
+Tem História, pois em atendimento à frota específica de veículos que transportam Produtos Perigosos, possui Acreditações autorizadas, em pontos estratégicos, para realizar capacitações e emissão do CIPP - Certificado de Inspeção de Produtos Perigosos e C.I.V – Certificado de Inspeção Veicular – RTQ-05.
+Tem história, pois é atuante em Inspeção de Segurança Veicular e Homologação de Empresas há muitos anos, com o recorde de milhares de Inspeções realizadas em nossas bases de inspeção e diversas empresas homologadas pelo Grupo Visto-Car para Fabricação de equipamentos rodoviários e Encarroçadores.</string>
+    <string name="dirigentes">DIRIGENTES</string>
+    <string name="dirigentes2">DIRIGENTES
+O Grupo Visto-Car é administrado por quem conhece profundamente o negócio, sua direção está nas mãos de um empresário nato, bacharel em Direito Administrativo, com pleno conhecimento e vasta experiência na gestão de empresas direcionadas ao segmento automotivo e Alterações e Recuperações Técnicas veiculares,
+        além de manter-se à frente gerencial das diversas unidades de inspeção, em conjunto com mais de 150 colaboradores, entre eles, engenheiros mecânicos e Técnicos-Mecânicos especialistas em projeto, fabricação, capacitação e inspeção veicular, todos diretamente atuantes, nas operações da empresa, ou seja,
+        toda e qualquer inspeção ou serviço inevitavelmente passará por um ou mais profissionais técnicos, com acompanhamento supervisional de seu Diretor e Gerente Geral.</string>
+    <string name="colaboradores">COLABORADORES</string>
+    <string name="colaboradores2">O Grupo Visto-Car tem uma equipe com excelência, contando com um quadro de funcionários e colaboradores formado por engenheiros e técnicos mecânicos registrados no Crea, Inmetro e Denatran, especialistas em inspeção veicular, além de pessoal específico de suporte administrativo, financeiro, 
+        comercial e da qualidade, em número e formação compatíveis com a necessidade de prestação de serviços eficientes, ágeis e confiáveis, de prontidão para servir com máxima competência a seus clientes. Cada unidade de inspeção, possui um ou mais Responsáveis Técnicos pelos serviços executados, devidamente registrados no CREA.</string>
+    <string name="qualidades">QUALIDADE</string>
+    <string name="qualidades2">A qualidade dos serviços prestados é assegurada pela manutenção de um Sistema de Gestão da Qualidade que atende aos requisitos expressos na norma ABNT NBR ISO/IEC 17020:2012 e normas NIT-DIOIS-do INMETRO.
+
+Nossa Politica da Qualidade é prestar serviços de inspeção de segurança veicular com uma visão estratégica baseada na operação eficaz de um Sistema de Gestão da Qualidade; de maneira a assegurar a plena satisfação de nossos clientes, a melhoria contínua dos processos, e o atendimento dos requisitos de qualidade, independência e imparcialidade aplicáveis à inspeção de segurança veicular.
+
+Nesta norma estão expressos requisitos para comprometimento da organização com qualidade, independência, imparcialidade e ausência de conflito de interesses, capacitação técnica do quadro funcional, adequação das instalações e equipamentos, treinamento contínuo, manutenção de registros e auditorias internas de qualidade, dentre outros.
+
+A eficácia deste Sistema de Gestão da Qualidade é avaliada anualmente pela CGCRE-INMETRO e gerida por profissionais capacitados com invejável currículo e vasta experiência em Sistema de Gestão de Qualidade – ISO 9001.
+
+O Grupo Visto-Car foi agraciado e premiado pelo renomado Prêmio TOP OF QUALITY concedido pela OPB - Ordem dos Parlamentares do Brasil, entidade de credibilidade, reputação e competência nacional e internacional, fator de grande estímulo para nossos colaboradores a continuar nossos esforços de melhoria contínua, que objetivam a obtenção da excelência na satisfação dos anseios de nossos clientes e das comunidades em que estamos inseridos.</string>
+    <string name="instalacao">INSTALAÇÕES E EQUIPAMENTOS</string>
+    <string name="instalacao2">Para a execução dos serviços de inspeção de segurança veicular cada unidade conta com a colaboração de um quadro técnico composto, no mínimo, de 2 Engenheiros Mecânicos e 2 Técnicos Mecânicos, todos com suficiente qualificação acadêmica e comprovada experiência profissional que atendem aos requisitos do CREA para o exercício profissional desta atividade. No tocante aos equipamentos, são utilizados instrumentos e estações automatizadas de inspeção de última geração tecnológica que conferem precisão e confiabilidade aos resultados obtidos. Dentre estes equipamentos destacam-se:</string>
+
+        <string name="instalacao3">◙ Medidor de Eficiência de Suspensão (Banco de Suspensão);</string>
+    <string name="instalacao4">◙ Analisador de Alinhamentos (Placa de Desvio Lateral);</string>
+    <string name="instalacao5">◙ Medidor de Eficiência do Freio (Frenômetro);</string>
+    <string name="instalacao6">◙ Detector de Folgas;</string>
+    <string name="instalacao7">◙ Analisador de Emissões Poluentes combustível líquido/GNV;</string>
+    <string name="instalacao8">◙ Medidor de Opacidade (Opacímetro);</string>
+    <string name="instalacao9">◙ Medidor de Alinhamento e Eficiência de Faróis (Regloscópio);</string>
+    <string name="instalacao10">◙ Medidor de Nível de Ruído (Decibelímetro);</string>
+    <string name="instalacao11">◙ Medidor de Transparência de Vidros (Fotômetro) e Dispositivo para Ensaio de Torção.</string>
+    <string name="historico">HISTÓRICO DE INSPEÇÕES</string>
+    <string name="historico2">O Grupo Visto-Car herdou o conhecimento, além do histórico de milhares de inspeções de segurança veicular realizadas e capacitações na área de Produtos Perigosos, ao longo de varios anos de atividades, incluindo a execução de grandes projetos como a certificação de acessibilidade dos ônibus, tendo inspecionado 40 % da frota específica no Brasil.
+
+Satisfação de Clientes
+No Grupo Visto-Car todos os que necessitam de serviços de inspeção veicular são muito bem-vindos e tratados com a máxima atenção e respeito, de forma simples, transparente e, principalmente, acessível, sem distinções, sejam proprietários individuais ou de frotas, despachantes ou freelancers, grandes ou pequenas empresas, entusiastas do automobilismo ou curiosos. Venha nos conhecer e provar de nossa qualidade e confiança nos serviços prestados.</string>
+
 
 </resources>
