@@ -34,7 +34,7 @@
     <string name="whatsApp">(11) 94353-4802/2240-2222</string>
     <string name="consultar">Consultar Tabela de Preços</string>
     <string name="mais">Saiba Mais</string>
-    <string name="recuperados">VEÍCULOS RECUPERADOS DE SINISTRO</string>
+    <string name="veiculos">VEÍCULOS RECUPERADOS DE SINISTRO</string>
     <string name="recuperados2">Documentos do Denatran e Inmetro afirmando que o veículo está correto com a lei</string>
     <string name="inspecao_com_emissao">Inspeção com emissão do CSV – Certificado de Segurança Veicular - Denatran e Inmetro apontando se os itens de segurança estão aprovados e
         de acordo com a legislação de transito. O veículo que sofre acidente é classificado pelas autoridades como pequena, média ou grande monta. Veículos com média monta, após o reparo,
@@ -80,5 +80,32 @@
     <string name="cadastrar">Cadastrar</string>
     <string name="acessar">Acessar</string>
     <string name="esqueceu_a_senha">Esqueceu a senha?</string>
+    <string name="recuperados">Todo veículo que é recuperado de furto, financiamento, enchente requer uma inspeção para certificar que o veículo está apto para circular em vias públicas sem oferecer risco aos usuários.</string>
+    <string name="vModificados">Veículos Modificados/ Alteração de Caracteristicas</string>
+    <string name="modificados">A inspeção de veículos automotores modificados é um serviço fornecido pelo Grupo Visto-Car, que garante a total satisfação de seus clientes e a regulamentação de seu veículo.</string>
+    <string name="gas">GÁS NATURAL VEICULAR – GNV</string>
+    <string name="gas2">Os veículos podem ser adaptados em instaladores registrados pelo INMETRO, que os tornam bicombustíveis. Proporciona uma média de economia de até 70% sobre o valor litro da gasolina.</string>
+    <string name="transporte">TRANSPORTE DE PRODUTOS PERIGOSOS</string>
+    <string name="transporte2">Conduzir em vias públicas veículos equipados para transporte de produtos perigosos requer, ao motorista, documentos especiais.</string>
+    <string name="alvaras">ALVARÁS DE TAXIS E ESCOLARES</string>
+    <string name="alvaras2">Inspeção veicular periódica para permissionários, de acordo com a legislação de trânsito municipal.</string>
+    <string name="mercosul">INSPEÇÃO MERCOSUL (CITV)</string>
+    <string name="mercosul2">Transitar com veículo de carga pelo Mercosul requer autorizações e certificações para possibilitar viagens seguras e passar pelas fronteiras. O veículo deve ser apresentado para a inspeção completo, limpo e sem carga.</string>
+    <string name="seguranca">INSPEÇÃO DE SEGURANÇA VEICULAR</string>
+    <string name="seguranca2">A inspeção de segurança veicular é um serviço que direciona, com precisão e confiabilidade, as manutenções no veículo.</string>
+    <string name="fretamento">FRETAMENTO AUTORIZADO (ANTT)</string>
+    <string name="fretamento2">Inspeção de itens de segurança em ônibus utilizado em fretamento interestadual e ou internacional, de acordo com as exigências da Agência Nacional de Transportes Terrestres (ANTT).</string>
+    <string name="homologacao">HOMOLOGAÇÃO DE EMPRESAS</string>
+    <string name="homologacao2">Oferecemos à empresa as avaliações necessárias para garantir a certificação.</string>
+    <string name="qualidade">INSPEÇÃO DA QUALIDADE PARA COMPANHIAS DE SEGUROS</string>
+    <string name="qualidade2">O Grupo VistoCar atua na inspeção dos itens de segurança e condições de circulação para aceitação de seguro em veículos com histórico diferenciado (alterados, recuperados de sinistro). </string>
+    <string name="isencao">ISENÇÃO DE IPVA PARA DEFICIENTES FÍSICOS</string>
+    <string name="isencao2">Veiculo especial para portador de mobilidade reduzida (deficiente físico) requer inspeção e certificados para obter isenção do Imposto sobre a Propriedade de Veículos Automotores (IPVA). </string>
+    <string name="acessibilidade">ACESSIBILIDADE EM ÔNIBUS URBANOS E RODOVIÁRIOS</string>
+    <string name="acessibilidade2">Pode fazer a inspeção de ônibus urbanos e rodoviários adaptados para a acessibilidade de pessoas com necessidades especiais na própria garagem da empresa.</string>
+    <string name="coleta">CAMINHÕES PARA COLETA DE ENTULHO - AMLURB</string>
+    <string name="coleta2">Inspeção dos itens de segurança e verificação do atendimento à legislação municipal vigente de caminhões empregados na coleta e transporte de entulhos que operam no municipio de São Paulo e outras regiões.</string>
+    <string name="importacao">PROCESSO DE IMPORTAÇÃO DE VEÍCULO</string>
+    <string name="importacao2">O Conselho Nacional de Trânsito (Contran) exige que a empresa que fabrica ou transforma veículos, com produção em série ou não, deve passar por avaliações tanto do órgão estadual como do Instituto Nacional de Metodologia.</string>
 
 </resources>

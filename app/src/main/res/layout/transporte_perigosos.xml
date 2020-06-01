@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:id="@+id/transporte"
     android:layout_height="match_parent"
-    tools:context="Servicos.Transporte"
+    tools:context=".Transporte"
     android:orientation="vertical">
 
     <include layout="@layout/toolbar"/>

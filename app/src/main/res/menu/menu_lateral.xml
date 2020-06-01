@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_perfil"
-            android:icon="@drawable/perfil"
-            android:title="Perfil"
-            android:checked="true"/>
 
         <item
             android:id="@+id/nav_agendamento"
@@ -22,10 +17,6 @@
             android:icon="@drawable/ogrupo"
             android:title="O Grupo"/>
 
-        <item
-            android:id="@+id/links"
-            android:icon="@drawable/links"
-            android:title="Links Úteis"/>
         <item
             android:id="@+id/services"
             android:icon="@drawable/servicos"
