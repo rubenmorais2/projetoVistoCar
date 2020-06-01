@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:id="@+id/recuperados"
     android:layout_height="match_parent"
-    tools:context="Servicos.Recuperados"
+    tools:context=".Recuperados"
     android:orientation="vertical">
 
     <include layout="@layout/toolbar"/>
