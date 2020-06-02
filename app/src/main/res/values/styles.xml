@@ -4,9 +4,10 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
 
-        <item name="colorPrimary">#FFFFFF</item>
-        <item name="colorPrimaryDark">#80000000</item>
-        <item name="colorAccent">#FFFFFF</item>
+        <item name="colorPrimary">#000070</item>
+        <item name="colorPrimaryDark">#FFFFFF</item>
+        <item name="colorAccent">#000070</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.Toolbar" parent="AppTheme">

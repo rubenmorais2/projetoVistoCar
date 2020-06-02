@@ -61,6 +61,11 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:19.1.0'
     implementation 'com.google.firebase:firebase-core:16.0.1'
     implementation 'com.google.firebase:firebase-database:19.3.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:28.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:25.1.0'
+
 
 
     //Google play services
@@ -80,6 +85,4 @@ dependencies {
 }
 //Firebase
 apply plugin: 'com.google.gms.google-services'
-
-//com.google.gms.googleservices.GoogleServicesPlugin.config.desableVersionCheck = true
 

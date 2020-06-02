@@ -1,43 +1,1009 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/preco"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
+    android:layout_height="match_parent">
 
-    <!--Conteúdo da tela-->
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
 
-        <include layout="@layout/toolbar" />
-
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="700dp">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <include layout="@layout/toolbar" />
+
+            <LinearLayout
+                android:id="@+id/tabela"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
             <TextView
-                android:layout_width="350dp"
-                android:layout_height="20dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="10dp"
-                android:background="#4d4d4d"
-                android:textColor="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="Valores e Tempos de Inspeção"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:textAlignment="center"/>
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:background="#363636"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
 
             <TextView
-                android:layout_width="350dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="25dp"
-                android:background="#f2f2f2"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="G.N.V"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 330,00"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="160dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="90 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RETIRADA DE G.N.V"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 330,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="160dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="90 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SINISTRO ou MODIFICADO"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:background="#363636"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Automovel"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 380,00"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="280dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="70 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MOTO - até 300 cc (cilindradas)"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 410,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="280dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="45 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MOTO - acima 300 cc (cilindradas)"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 330,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="280dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="45 min"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Camioneta/Caminhonete"
+                android:layout_marginTop="-2dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 480,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="280dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="360dp"
+                android:layout_marginTop="-22dp"
+                android:text="90 min"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Microônibus - Até 21 lugares"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 530,00"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="280dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="90 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ônibus - Acima de 21 lugares"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 640,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="280dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="90 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Caminhão - Toco"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 550,00"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="280dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="90 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Caminhão - Truck"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 650,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="280dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="90 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reboque/Semi-Reboque ATÉ 3 eixos"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 920,00"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="280dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="90 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reboque/Semi-Reboque ACIMA 3 eixos"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 2.100,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="280dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="90 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TURBO e/ou SUSPENSÃO"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 500,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="280dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="90 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BLINDADOS"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:background="#363636"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Automovel"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 430,00"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="70 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Caminhonete/Camioneta"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 480,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="70 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="C.I.T.V - MERCOSUL"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:background="#363636"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cav. Trator/Caminhão"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 460,00"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="260dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="70 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reboque/Semi-Reboque ATÉ 3 eixos"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 660,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="260dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="90 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PREFEITURA DE GUARULHOS - SMT"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:background="#363636"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OPACIDADE"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="270dp"
+                android:layout_marginTop="-22dp"
+                android:text="R$ 200,00"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RUÍDO"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 200,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LIMPURB"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 370,00"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ISENÇÃO DE IPVA"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 370,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A.N.T.T"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 460,00"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laudo Técnico-Automovel/Camionete"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 600,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laudo Técnico-Caminhão , etc.."
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 1.000,00"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LIMOUSINE"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 850,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FABRICAÇÃO ARTESANAL"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 2.500,00"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GUINDASTE e CAMINHÃO GUINDASTE"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:layout_marginStart="270dp"
+                android:layout_marginTop="-20dp"
+                android:text="R$ 4.000,00"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120 min"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="360dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PREFEITURA DE SÃO PAULO - DTP"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:background="#363636"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TAXI - Alvará"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 110,00"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
 
 
-        </ScrollView>
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MOTO-FRETE"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
 
-</androidx.drawerlayout.widget.DrawerLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 45,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TAXI - G.N.V"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 240,00"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TAXI - D.T.P + G.N.V"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 330,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ESCOLAR - Até 3.500 PBT"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 110,00"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ESCOLAR - Até 8.000 PBT"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 148,50"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ESCOLAR - Acima 8.000 PBT"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 169,50"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="INSPEÇÃO ESPECÍFICA"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:background="#363636"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TAXI - Alvará"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 175,00"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TAXI - G . N . V"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 220,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TAXI - Alvará + G.N.V"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 285,00"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ESCOLAR"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 180,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ESCOLAR - SINDICATO/COOPERATIVA"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 160,00"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ESCOLAR + GNV"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 300,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ESCOLAR - GNV"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 220,00"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ONIBUS - STT"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 250,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ONIBUS STT- COOPERAT"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 180,00"
+                android:layout_marginTop="-22dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MOTO-FRETE"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 160,00"
+                android:layout_marginTop="-20dp"
+                android:textSize="15dp"
+                android:layout_marginStart="270dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
