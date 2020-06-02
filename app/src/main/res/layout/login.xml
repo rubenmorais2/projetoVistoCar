@@ -87,17 +87,18 @@
         android:layout_width="175dp"
         android:layout_height="30dp"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="262dp"
+        android:layout_marginTop="202dp"
         android:layout_marginBottom="250dp"
+        android:text="@string/esqueceu_a_senha"
         android:textColor="#000070"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintHorizontal_bias="0.036"
         app:layout_constraintLeft_toLeftOf="@+id/ll_container_fields"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/senha"
-        app:layout_constraintVertical_bias="0.066" />
+        app:layout_constraintVertical_bias="0.696" />
 
     <Button
         android:id="@+id/button"

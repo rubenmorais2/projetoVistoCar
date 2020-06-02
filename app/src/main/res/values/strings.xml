@@ -136,7 +136,7 @@ O Grupo Visto-Car foi agraciado e premiado pelo renomado Prêmio TOP OF QUALITY 
     <string name="instalacao">INSTALAÇÕES E EQUIPAMENTOS</string>
     <string name="instalacao2">Para a execução dos serviços de inspeção de segurança veicular cada unidade conta com a colaboração de um quadro técnico composto, no mínimo, de 2 Engenheiros Mecânicos e 2 Técnicos Mecânicos, todos com suficiente qualificação acadêmica e comprovada experiência profissional que atendem aos requisitos do CREA para o exercício profissional desta atividade. No tocante aos equipamentos, são utilizados instrumentos e estações automatizadas de inspeção de última geração tecnológica que conferem precisão e confiabilidade aos resultados obtidos. Dentre estes equipamentos destacam-se:</string>
 
-        <string name="instalacao3">◙ Medidor de Eficiência de Suspensão (Banco de Suspensão);</string>
+    <string name="instalacao3">◙ Medidor de Eficiência de Suspensão (Banco de Suspensão);</string>
     <string name="instalacao4">◙ Analisador de Alinhamentos (Placa de Desvio Lateral);</string>
     <string name="instalacao5">◙ Medidor de Eficiência do Freio (Frenômetro);</string>
     <string name="instalacao6">◙ Detector de Folgas;</string>

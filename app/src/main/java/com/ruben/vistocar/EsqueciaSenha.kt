@@ -47,20 +47,21 @@ class EsqueciaSenha : AppCompatActivity() {
     }
 
     private fun sendPasswordEmail() {
+
         val emailRecuperado = etEmailRecuperado?.text.toString()
 
         if (!TextUtils.isEmpty(emailRecuperado)) {
-            mAuth!!
+            val mAuth = FirebaseAuth.getInstance()
                 .sendPasswordResetEmail(emailRecuperado)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        val message = "Email enviado com sucesso!"
+                        val message = "Verifique seu email!"
                         Log.d(TAG, message)
                         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-                        updateUi()
+                        updateUI()
                     } else {
                         Log.w(TAG, task.exception!!.message)
-                        Toast.makeText(this, "Usuário não encontrado com esse email.", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Usuário não encontrado, ou certifique-se de estar conectado a internet.", Toast.LENGTH_LONG).show()
                     }
                 }
         } else {
@@ -68,7 +69,7 @@ class EsqueciaSenha : AppCompatActivity() {
         }
     }
 
-    private fun updateUi() {
+    private fun updateUI() {
         val intent = Intent(this@EsqueciaSenha, MainActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)

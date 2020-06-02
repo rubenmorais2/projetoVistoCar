@@ -92,8 +92,8 @@ class Cadastro : AppCompatActivity() {
 
         mProgress!!.setMessage("Registrando Usuário...")
         mProgress!!.show()
+        val mAuth = FirebaseAuth.getInstance()
 
-        mAuth!!
             .createUserWithEmailAndPassword(Email!!, Senha!!).addOnCompleteListener(this) {task ->
                mProgress!!.hide()
 
@@ -129,6 +129,7 @@ class Cadastro : AppCompatActivity() {
 
     private fun verifyEmail() {
 
+        val mAuth = FirebaseAuth.getInstance()
         val mUser = mAuth!!.currentUser;
         mUser!!
             .sendEmailVerification()

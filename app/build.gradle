@@ -60,6 +60,8 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.2.0'
     implementation 'com.google.firebase:firebase-auth:19.1.0'
     implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'com.google.firebase:firebase-database:19.3.0'
+
 
     //Google play services
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
