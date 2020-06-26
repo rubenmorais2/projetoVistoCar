@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <include layout="@layout/toolbar" />
+
+            <LinearLayout
+                android:id="@+id/Linear"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="90dp"
+                android:text="@string/unidades_e_localiza_o"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="#000070"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="370dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/o_grupo_visto_car_possui_v_rias_unidades_de_inspe_o_veicular_nas_cidades_de_s_o_paulo_guarulhos_piracicaba_e_s_o_jos_dos_campos_em_s_o_paulo_contamos_com_mais_05_unidades_espalhadas_nos_bairros_ipiranga_butant_ja_an_anchieta_e_planalto_paulista_e_mais_03_unidades_em_guarulhos_selecione_a_unidade_de_sua_prefer_ncia_para_verificar_localiza_o_e_hor_rios_de_funcionamento"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/jacana"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-190dp"
+                android:layout_marginStart="210dp"
+                android:text="@string/unidade_ja_an"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="#000070"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="190dp"
+                android:text="@string/rua_benjamim_pereira_452_ja_an_s_o_paulo_sp"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="190dp"
+                android:text="@string/fone_11_2242_4966_hor_rio_de_atendimento_segunda_sexta_das_8h_s_17h"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/jacana"
+                android:layout_width="370dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#F6C01E"
+                android:text="Localização"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="#000070"/>
+
+            <TextView
+                android:layout_width="380dp"
+                android:layout_height="280dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-260dp"
+                android:background="@drawable/form_text"/>
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/ipiranga"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-190dp"
+                android:layout_marginStart="200dp"
+                android:text="@string/unidade_ipiranga"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="#000070"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="180dp"
+                android:text="@string/av_presidente_tancredo_neves_225_ipiranga_s_o_paulo_sp"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="180dp"
+                android:text="@string/fone_11_2061_2299_hor_rio_de_atendimento_segunda_sexta_das_08_00_as_18_00h"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/ipiranga"
+                android:layout_width="370dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="#F6C01E"
+                android:text="Localização"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="#000070"/>
+
+            <TextView
+                android:layout_width="380dp"
+                android:layout_height="300dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-280dp"
+                android:background="@drawable/form_text"/>
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/butata"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-190dp"
+                android:layout_marginStart="200dp"
+                android:text="@string/unidade_butant"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="#000070"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="190dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="190dp"
+                android:text="@string/av_desembargador_armando_fairbanks_204_butant_s_o_paulo_sp"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="190dp"
+                android:text="@string/fone_11_3032_2115_11_9_6387_8966_hor_rio_de_atendimento_segunda_sexta_das_09_00_as_17_00h"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/butanta"
+                android:layout_width="370dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#F6C01E"
+                android:text="Localização"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="#000070"/>
+
+            <TextView
+                android:layout_width="380dp"
+                android:layout_height="300dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-290dp"
+                android:background="@drawable/form_text"/>
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/saude"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-190dp"
+                android:layout_marginStart="200dp"
+                android:text="@string/unidade_sa_de"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="#000070"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="190dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="190dp"
+                android:text="@string/av_jos_maria_whitaker_2003_planalto_paulista_sp"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="190dp"
+                android:text="@string/fone_11_3853_2085_hor_rio_de_atendimento_segunda_sexta_das_8h_s_18h"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/saude"
+                android:layout_width="370dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:backgroundTint="#F6C01E"
+                android:text="Localização"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="#000070"/>
+
+            <TextView
+                android:layout_width="380dp"
+                android:layout_height="280dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-260dp"
+                android:background="@drawable/form_text"/>
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/guarulhos_i"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-190dp"
+                android:layout_marginStart="200dp"
+                android:text="@string/unidade_guarulhos_i"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="#000070"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="190dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="190dp"
+                android:text="@string/rua_maria_c_ndida_pereira_783_itapegica_guarulhos_sp"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="190dp"
+                android:text="@string/fone_11_2425_3288_hor_rio_de_atendimento_segunda_sexta_das_8h_s_18h"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/guarulhos_i"
+                android:layout_width="370dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#F6C01E"
+                android:text="@string/localiza_o"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="#000070"/>
+
+            <TextView
+                android:layout_width="380dp"
+                android:layout_height="280dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-260dp"
+                android:background="@drawable/form_text"/>
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/guarulhos_ii"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-190dp"
+                android:layout_marginStart="200dp"
+                android:text="@string/unidade_guarulhos_ii"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="#000070"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="190dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="190dp"
+                android:text="@string/av_guinle_1815_cidade_industrial_sat_lite_de_s_o_paulo_sp"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="190dp"
+                android:text="@string/fone_11_2303_1827_hor_rio_de_atendimento_segunda_sexta_das_8h_s_18h"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/guarulhos_ii"
+                android:layout_width="370dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#F6C01E"
+                android:text="Localização"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="#000070"/>
+
+            <TextView
+                android:layout_width="380dp"
+                android:layout_height="290dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-270dp"
+                android:background="@drawable/form_text"/>
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/piracicaba"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-200dp"
+                android:layout_marginStart="200dp"
+                android:text="Unidade Piracicaba"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="#000070"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="190dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="190dp"
+                android:text="@string/travessa_fortunato_stolf_83_jd_caxambu_piracicaba_sp"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="190dp"
+                android:text="@string/fone_11_2303_1827_hor_rio_de_atendimento_segunda_sexta_das_8h_s_18h"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/piracicaba"
+                android:layout_width="370dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="#F6C01E"
+                android:text="Localização"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="#000070"/>
+
+            <TextView
+                android:layout_width="380dp"
+                android:layout_height="290dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-270dp"
+                android:background="@drawable/form_text"/>
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/piracicaba"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-200dp"
+                android:layout_marginStart="180dp"
+                android:text="Unidade São José dos Campos"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="#000070"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="190dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="190dp"
+                android:text="@string/rua_gua_u_240_ch_caras_reunidas_s_o_jos_dos_campos_sp"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="190dp"
+                android:text="@string/fones_12_3933_6312_hor_rio_de_atendimento_segunda_sexta_das_8h_s_18h"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/sao_jose"
+                android:layout_width="370dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#F6C01E"
+                android:text="Localização"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="#000070"/>
+
+            <TextView
+                android:layout_width="380dp"
+                android:layout_height="290dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-280dp"
+                android:background="@drawable/form_text"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

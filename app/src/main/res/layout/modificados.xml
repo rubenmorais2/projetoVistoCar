@@ -1,13 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:id="@+id/modificados"
-    android:layout_height="match_parent"
-    tools:context=".Modificados"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Modificados">
 
-    <include layout="@layout/toolbar"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <include layout="@layout/toolbar" />
+
+            <LinearLayout
+                android:id="@+id/Linear"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:textColor="#000070"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:text="ALTERAÇÃO DE CARACTERÍSTICAS"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:text="@string/quando_um_ve_culo_sofre_um_acidente_enquadrado_em_um_tipo_de_dano_seja_pequeno_m_dio_ou_grande_de_acordo_com_crit_rio_da_lei_pela_autoridade_de_tr_nsito_o_dano_m_dio_gera_restri_o_do_ve_culo_no_detran_que_para_ser_eliminada_requer_inspe_o_veicular_j_o_grande_pode_determinar_o_seu_sucateamento_por_m_pode_ser_contestado_atrav_s_dos_servi_os_t_cnicos_de_reclassifica_o_da_monta"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:textColor="#000070"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:text="@string/o_que_necess_rio_para_realizar"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:text="@string/basta_se_dirigir_a_um_dos_endere_os_do_grupo_visto_car_para_a_inspe_o_veicular_levando_a_carteira_de_identidade_ou_habilita_o_e_documento_atual_do_ve_culo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:textColor="#000070"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:text="@string/quais_o_s_documento_s_gerados_ao_final"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:text="@string/caso_o_ve_culo_seja_aprovado_ser_emitido_o_csv_certificado_de_seguran_a_veicular_e_o_ci_certificado_de_inspe_o_respectivamente_documentos_do_denatran_e_inmetro_afirmando_que_o_ve_culo_est_correto_com_a_lei_se_reprovado_ser_emitido_ent_o_o_rnc_relat_rio_de_n_o_conformidades_com_todos_os_defeitos_apresentados_pelo_ve_culo_com_isso_o_propriet_rio_ter_30_dias_para_corrigir_e_retornar_sem_nenhum_custo_adicional"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:textColor="#000070"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:text="@string/o_que_fazer_em_seguida"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:text="Encaminhar o CSV ao Detran que por sua vez eliminará a restrição do veículo."/>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.cardview.widget.CardView>

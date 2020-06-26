@@ -19,6 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_vistocar_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".MainActivity"
             android:theme="@style/SplashScreen">
@@ -35,6 +36,17 @@
             android:noHistory="true"
             android:theme="@style/SplashScreen" />
 
+        <activity android:name=".Saude"
+            android:theme="@style/AppTheme.Toolbar"/>
+        <activity
+            android:name=".Butanta"
+            android:theme="@style/AppTheme.Toolbar" />
+        <activity
+            android:name=".Ipiranga"
+            android:theme="@style/AppTheme.Toolbar" />
+        <activity
+            android:name=".Localizacao"
+            android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name=".TabelaPrecos"
             android:theme="@style/AppTheme.Toolbar" />
@@ -45,7 +57,7 @@
             android:name=".Cadastro"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
-            android:name=".MapasActivity"
+            android:name=".Jacana"
             android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name=".AgendandoAgendar"

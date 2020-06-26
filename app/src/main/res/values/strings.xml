@@ -158,6 +158,30 @@ No Grupo Visto-Car todos os que necessitam de serviços de inspeção veicular s
     <string name="quais_o_s_documento_s_gerados_ao_final">Quais o(s) documento(s) gerados ao final?</string>
     <string name="caso_o_ve_culo_seja_aprovado_ser_emitido_o_csv_certificado_de_seguran_a_veicular_e_o_ci_certificado_de_inspe_o_respectivamente_documentos_do_denatran_e_inmetro_afirmando_que_o_ve_culo_est_correto_com_a_lei_se_reprovado_ser_emitido_ent_o_o_rnc_relat_rio_de_n_o_conformidades_com_todos_os_defeitos_apresentados_pelo_ve_culo_com_isso_o_propriet_rio_ter_30_dias_para_corrigir_e_retornar_sem_nenhum_custo_adicional">Caso o veículo seja aprovado será emitido o CSV – Certificado de Segurança Veicular e o CI – Certificado de Inspeção, respectivamente documentos do Denatran e Inmetro afirmando que o veículo está correto com a lei. Se reprovado será emitido então o RNC – Relatório de Não Conformidades com todos os defeitos apresentados pelo veículo, com isso o proprietário terá 30 dias para corrigir e retornar sem nenhum custo adicional.</string>
     <string name="o_que_fazer_em_seguida">O que fazer em seguida?</string>
+    <string name="o_grupo_visto_car_possui_v_rias_unidades_de_inspe_o_veicular_nas_cidades_de_s_o_paulo_guarulhos_piracicaba_e_s_o_jos_dos_campos_em_s_o_paulo_contamos_com_mais_05_unidades_espalhadas_nos_bairros_ipiranga_butant_ja_an_anchieta_e_planalto_paulista_e_mais_03_unidades_em_guarulhos_selecione_a_unidade_de_sua_prefer_ncia_para_verificar_localiza_o_e_hor_rios_de_funcionamento">O Grupo Visto-Car possui várias unidades de inspeção veicular nas cidades de São Paulo, Guarulhos, Piracicaba e São José dos Campos. Em São Paulo contamos com mais 05 unidades espalhadas nos bairros Ipiranga, Butantã, Jaçanã, Anchieta e Planalto Paulista e mais 03 Unidades em Guarulhos. Selecione a unidade de sua preferência para verificar localização e horários de funcionamento.</string>
+    <string name="unidades_e_localiza_o">UNIDADES E LOCALIZAÇÃO</string>
+    <string name="unidade_ja_an">Unidade Jaçanã</string>
+    <string name="rua_benjamim_pereira_452_ja_an_s_o_paulo_sp">Rua Benjamim Pereira, 452 Jaçanã - São Paulo – SP</string>
+    <string name="fone_11_2242_4966_hor_rio_de_atendimento_segunda_sexta_das_8h_s_17h">Fone: (11) 2242-4966 Horário de Atendimento Segunda à sexta das 8h às 17h</string>
+    <string name="unidade_ipiranga">Unidade Ipiranga</string>
+    <string name="av_presidente_tancredo_neves_225_ipiranga_s_o_paulo_sp">Av. Presidente Tancredo Neves, 225 Ipiranga - São Paulo – SP</string>
+    <string name="fone_11_2061_2299_hor_rio_de_atendimento_segunda_sexta_das_08_00_as_18_00h">Fone: (11) 2061-2299 Horário de Atendimento Segunda à sexta das 08:00 as 18:00h</string>
+    <string name="unidade_butant">Unidade Butantã</string>
+    <string name="av_desembargador_armando_fairbanks_204_butant_s_o_paulo_sp">Av. Desembargador Armando Fairbanks, 204 Butantã - São Paulo – SP</string>
+    <string name="unidade_sa_de">Unidade Saúde</string>
+    <string name="av_jos_maria_whitaker_2003_planalto_paulista_sp">Av. José Maria Whitaker, 2003 Planalto Paulista – SP</string>
+    <string name="fone_11_3853_2085_hor_rio_de_atendimento_segunda_sexta_das_8h_s_18h">Fone: (11) 3853-2085 Horário de Atendimento Segunda à sexta das 8h às 18h</string>
+    <string name="rua_maria_c_ndida_pereira_783_itapegica_guarulhos_sp">Rua Maria Cândida Pereira, 783 Itapegica - Guarulhos – SP</string>
+    <string name="fone_11_2425_3288_hor_rio_de_atendimento_segunda_sexta_das_8h_s_18h">Fone: (11) 2425-3288 Horário de Atendimento Segunda à sexta das 8h às 18h</string>
+    <string name="av_guinle_1815_cidade_industrial_sat_lite_de_s_o_paulo_sp">Av. Guinle, 1815 Cidade Industrial Satélite de São Paulo - SP</string>
+    <string name="fone_11_2303_1827_hor_rio_de_atendimento_segunda_sexta_das_8h_s_18h">Fone: (11) 2303-1827 Horário de Atendimento Segunda à sexta das 8h às 18h</string>
+    <string name="travessa_fortunato_stolf_83_jd_caxambu_piracicaba_sp">Travessa Fortunato Stolf, 83 Jd. Caxambu - Piracicaba – SP</string>
+    <string name="rua_gua_u_240_ch_caras_reunidas_s_o_jos_dos_campos_sp">Rua Guaçuí, 240 - Chácaras Reunidas São José dos Campos – SP</string>
+    <string name="fones_12_3933_6312_hor_rio_de_atendimento_segunda_sexta_das_8h_s_18h">Fones: (12) 3933-6312 Horário de Atendimento Segunda à sexta das 8h às 18h</string>
+    <string name="fone_11_3032_2115_11_9_6387_8966_hor_rio_de_atendimento_segunda_sexta_das_09_00_as_17_00h">Fone: (11) 3032-2115 (11) 9 6387-8966 Horário de Atendimento Segunda à sexta das 09:00 as 17:00h</string>
+    <string name="unidade_guarulhos_i">Unidade Guarulhos I</string>
+    <string name="localiza_o">Localização</string>
+    <string name="unidade_guarulhos_ii">Unidade Guarulhos II</string>
 
 
 </resources>
